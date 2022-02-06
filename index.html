@@ -4,9 +4,147 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Proza+Libre:ital,wght@0,400;0,700;1,400&display=swap"
+			rel="stylesheet"
+		/>
 		<link rel="stylesheet" href="./css/style.css" />
 		<script src="./js/script.js" defer></script>
-		<title>Template</title>
+		<title>Liar Game</title>
 	</head>
-	<body></body>
+	<body>
+		<div class="loginWrapper">
+			<div class="loginBackground"></div>
+			<div class="userLogin">
+				<div class="userLogin__clue">There is a password clue here</div>
+				<i class="userLogin__svg--hor"
+					><svg
+						width="1200"
+						height="16"
+						viewBox="0 0 1210 52"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<path
+							d="M605 1L619.695 5.77457L628.776 18.2746V33.7254L619.695 46.2254L605 51L590.305 46.2254L581.224 33.7254V18.2746L590.305 5.77457L605 1Z"
+							fill="black"
+						/>
+						<path
+							d="M630.342 26L680.105 1.04049L812.962 26L680.105 50.9595L630.342 26Z"
+							fill="black"
+						/>
+						<path
+							d="M814.039 26L832.865 1.17741L1206.06 26L832.865 50.8226L814.039 26Z"
+							fill="black"
+						/>
+						<path
+							d="M579.658 26L529.895 1.04049L397.038 26L529.895 50.9595L579.658 26Z"
+							fill="black"
+						/>
+						<path
+							d="M395.961 26L377.135 1.17741L3.93835 26L377.135 50.8226L395.961 26Z"
+							fill="black"
+						/>
+						<path
+							d="M680.186 1L680.105 1.04049M680.105 1.04049L630.342 26M680.105 1.04049L812.962 26M680.105 1.04049L680.013 1.02327M630.342 26L630 26.1717M630.342 26L630 25.8283M630.342 26L680.105 50.9595M680.105 50.9595L680.186 51M680.105 50.9595L680.013 50.9767M680.105 50.9595L812.962 26M812.962 26L814 25.805M812.962 26L814 26.195M833 1L832.865 1.17741M832.865 1.17741L814.039 26M832.865 1.17741L1206.06 26M832.865 1.17741L832.358 1.14364M814.039 26L814 26.0518M814.039 26L814 25.9482M814.039 26L832.865 50.8226M832.865 50.8226L833 51M832.865 50.8226L832.358 50.8564M832.865 50.8226L1206.06 26M1206.06 26L1209 25.8046M1206.06 26L1209 26.1954M529.814 1L529.895 1.04049M529.895 1.04049L579.658 26M529.895 1.04049L397.038 26M529.895 1.04049L529.987 1.02327M579.658 26L580 26.1717M579.658 26L580 25.8283M579.658 26L529.895 50.9595M529.895 50.9595L529.814 51M529.895 50.9595L529.987 50.9767M529.895 50.9595L397.038 26M397.038 26L396 25.805M397.038 26L396 26.195M377 1L377.135 1.17741M377.135 1.17741L395.961 26M377.135 1.17741L3.93835 26M377.135 1.17741L377.642 1.14364M395.961 26L396 26.0518M395.961 26L396 25.9482M395.961 26L377.135 50.8226M377.135 50.8226L377 51M377.135 50.8226L377.642 50.8564M377.135 50.8226L3.93835 26M3.93835 26L1 25.8046M3.93835 26L1.00006 26.1954M605 1L619.695 5.77457L628.776 18.2746V33.7254L619.695 46.2254L605 51L590.305 46.2254L581.224 33.7254V18.2746L590.305 5.77457L605 1Z"
+							stroke="black"
+						/></svg
+				></i>
+				<form class="userLogin__form" action="">
+					<div class="inputWrapper">
+						<div class="inputWrap">
+							<input
+								placeholder="username"
+								class="input userLogin__form--username"
+								type="text"
+								name=""
+								id=""
+							/>
+						</div>
+
+						<i class="userLogin__form--svg"
+							><svg
+								width="23"
+								height="100"
+								viewBox="0 0 23 171"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<path
+									d="M0.504502 85.5L11.5 3.75087L22.4955 85.5L11.5 167.249L0.504502 85.5Z"
+									fill="#B90000"
+									stroke="black"
+								/>
+							</svg>
+						</i>
+						<div class="inputWrap">
+							<input
+								placeholder="password"
+								class="input userLogin__form--password"
+								type="text"
+								name=""
+								id=""
+							/>
+						</div>
+					</div>
+					<label class="enterLabel" for="enterBtn">
+						<button
+							id="enterBtn"
+							class="userLogin__form--btn"
+						></button>
+						<div class="enterDiv">ENTER</div>
+					</label>
+				</form>
+				<div class="hint">?</div>
+			</div>
+		</div>
+		<div class="welcomeMessage displayNone">
+			<h1 class="welcomeTxt">Welcome to Liars Game</h1>
+		</div>
+		<div class="mainWrapper displayNone">
+			<header>
+				<nav class="mainNav"></nav>
+				<section class="description">
+					<h1 class="sescription__quote">Cool Quote ...</h1>
+					<i class="horIcon__black"
+						><svg
+							width="1210"
+							height="52"
+							viewBox="0 0 1210 52"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								d="M605 1L619.695 5.77457L628.776 18.2746V33.7254L619.695 46.2254L605 51L590.305 46.2254L581.224 33.7254V18.2746L590.305 5.77457L605 1Z"
+								fill="black"
+							/>
+							<path
+								d="M630.342 26L680.105 1.04049L812.962 26L680.105 50.9595L630.342 26Z"
+								fill="black"
+							/>
+							<path
+								d="M814.039 26L832.865 1.17741L1206.06 26L832.865 50.8226L814.039 26Z"
+								fill="black"
+							/>
+							<path
+								d="M579.658 26L529.895 1.04049L397.038 26L529.895 50.9595L579.658 26Z"
+								fill="black"
+							/>
+							<path
+								d="M395.961 26L377.135 1.17741L3.93835 26L377.135 50.8226L395.961 26Z"
+								fill="black"
+							/>
+							<path
+								d="M680.186 1L680.105 1.04049M680.105 1.04049L630.342 26M680.105 1.04049L812.962 26M680.105 1.04049L680.013 1.02327M630.342 26L630 26.1717M630.342 26L630 25.8283M630.342 26L680.105 50.9595M680.105 50.9595L680.186 51M680.105 50.9595L680.013 50.9767M680.105 50.9595L812.962 26M812.962 26L814 25.805M812.962 26L814 26.195M833 1L832.865 1.17741M832.865 1.17741L814.039 26M832.865 1.17741L1206.06 26M832.865 1.17741L832.358 1.14364M814.039 26L814 26.0518M814.039 26L814 25.9482M814.039 26L832.865 50.8226M832.865 50.8226L833 51M832.865 50.8226L832.358 50.8564M832.865 50.8226L1206.06 26M1206.06 26L1209 25.8046M1206.06 26L1209 26.1954M529.814 1L529.895 1.04049M529.895 1.04049L579.658 26M529.895 1.04049L397.038 26M529.895 1.04049L529.987 1.02327M579.658 26L580 26.1717M579.658 26L580 25.8283M579.658 26L529.895 50.9595M529.895 50.9595L529.814 51M529.895 50.9595L529.987 50.9767M529.895 50.9595L397.038 26M397.038 26L396 25.805M397.038 26L396 26.195M377 1L377.135 1.17741M377.135 1.17741L395.961 26M377.135 1.17741L3.93835 26M377.135 1.17741L377.642 1.14364M395.961 26L396 26.0518M395.961 26L396 25.9482M395.961 26L377.135 50.8226M377.135 50.8226L377 51M377.135 50.8226L377.642 50.8564M377.135 50.8226L3.93835 26M3.93835 26L1 25.8046M3.93835 26L1.00006 26.1954M605 1L619.695 5.77457L628.776 18.2746V33.7254L619.695 46.2254L605 51L590.305 46.2254L581.224 33.7254V18.2746L590.305 5.77457L605 1Z"
+								stroke="black"
+							/>
+						</svg>
+					</i>
+				</section>
+			</header>
+			<section class="carousel"></section>
+		</div>
+	</body>
 </html>
