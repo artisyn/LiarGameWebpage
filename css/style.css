@@ -333,8 +333,19 @@ header {
 /* gameBlock */
 
 .game {
+	padding: 1rem;
 	background-color: lightslategray;
 	height: 40vh;
+}
+.game__title {
+	text-align: center;
+}
+.game__number {
+	font-style: italic;
+}
+.game__name {
+	text-decoration-line: overline;
+	text-decoration-color: var(--main-red);
 }
 
 /* next content */
@@ -348,6 +359,128 @@ header {
 	background-size: cover;
 }
 
+/* character cards */
+.cards__container {
+	border: 1px solid black;
+	margin: 0 auto;
+	height: 30rem;
+	gap: 1rem;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	padding: 1rem;
+}
+.card {
+	max-width: 400px;
+	overflow: hidden;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	border: 6px solid var(--main-red);
+	border-radius: 0.2rem;
+	cursor: pointer;
+	transition: background 0.8s;
+	box-shadow: 0 70px 63px -60px #000000;
+}
+.cards__title {
+	color: rgb(173, 6, 6);
+	opacity: 0.5;
+	transition: all ease 0.4s;
+}
+.cards__text {
+	font-size: 1.2rem;
+	opacity: 0;
+	transition: all ease 0.4s;
+	padding: 1rem;
+	text-align: left;
+	font-weight: bold;
+}
+
+.card1 {
+	background: url(../images/akiyama.jpg) center center no-repeat;
+	background-size: cover;
+	color: white;
+}
+.card2 {
+	background: url(../images/kanzaki.jpg) center center no-repeat;
+	background-size: 400px;
+	color: rgb(0, 0, 0);
+}
+.card3 {
+	background: url(../images/fukunaga.jpg) center center no-repeat;
+	background-size: cover;
+	color: white;
+}
+
+.card1:hover {
+	background: url(../images/akiyama.jpg) center left no-repeat;
+	background-size: 600px;
+}
+.card2:hover {
+	background: url(../images/kanzaki.jpg) center center no-repeat;
+	background-size: 600px;
+}
+.card3:hover {
+	background: url(../images/fukunaga.jpg) center right no-repeat;
+	background-size: 600px;
+}
+
+.card:hover > .cards__title {
+	opacity: 1;
+}
+.card:hover > .cards__text {
+	opacity: 1;
+}
+
+/* Footer */
+.footer {
+	/* border: 2px solid white; */
+	background-color: black;
+	padding: 1rem;
+	/* display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center; */
+}
+.footer__more {
+	height: 5rem;
+	background-color: var(--main-red);
+	margin-bottom: 1rem;
+}
+.footer__author {
+	/* border: 1px solid #ffffff; */
+	width: 100%;
+	color: white;
+	/* display: flex;
+	justify-content: space-between; */
+	display: grid;
+	grid-template-columns: auto 1fr;
+}
+.author__greet {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.love__logo {
+	margin-left: 1rem;
+	margin-right: 1rem;
+}
+.author__name {
+	margin-left: 1rem;
+	font-size: 1.2rem;
+	font-weight: bold;
+	margin-right: 2rem;
+}
+.author__social {
+	/* border: 2px solid white; */
+	border-radius: 1rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+}
+
 /* Display properties */
 
 .displayNone {
@@ -355,17 +488,6 @@ header {
 }
 .noOpacity {
 	opacity: 0;
-}
-
-/* Footer */
-.footer {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	background-color: black;
-	color: white;
-	height: 15rem;
 }
 
 /* Animations */
@@ -426,6 +548,10 @@ header {
 	.login__wrong-pass {
 		margin-bottom: 1rem;
 		margin-top: 0;
+	}
+	.footer__author {
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr 1fr;
 	}
 }
 
@@ -534,5 +660,15 @@ header {
 	}
 	.player__balance {
 		display: block;
+	}
+	.cards__container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		height: fit-content;
+	}
+	.card {
+		height: 400px;
 	}
 }
