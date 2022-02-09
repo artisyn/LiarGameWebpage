@@ -5,11 +5,12 @@ const loginBtn = document.querySelector('.login__btn');
 const loginWrapper = document.querySelector('.loginWrapper');
 const welcomeMessage = document.querySelector('.login__welcome-msg');
 const wrongPassMsg = document.querySelector('.login__wrong-pass');
+const mainWrapper = document.querySelector('.mainWrapper');
 // const username = document.querySelector('');
 // const username = document.querySelector('');
 
 // functions
-
+// remake to async await
 const hideLogin = (user) => {
   loginWrapper.classList.add('fade');
   setTimeout(() => {
@@ -19,6 +20,14 @@ const hideLogin = (user) => {
     setTimeout(() => {
       welcomeMessage.classList.add('displayNone');
       welcomeMessage.classList.remove('fadeInOut');
+      // animation for main
+      //fadeIn
+      mainWrapper.classList.add('fadeIn');
+      mainWrapper.classList.remove('displayNone');
+      mainWrapper.classList.remove('noOpacity');
+      setTimeout(() => {
+        mainWrapper.classList.remove('fadeIn');
+      }, 4000);
       /// user
     }, 6000);
   }, 4000);

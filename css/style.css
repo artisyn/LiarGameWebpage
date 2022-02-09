@@ -198,22 +198,46 @@ body {
 	transition: all ease-out 3s;
 }
 
-/* Header styles */
+/* Header*/
 header {
-	min-height: 100vh;
+	background-color: rgb(0, 0, 0);
+	padding: 0.8rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	font-size: 1.5rem;
+	flex-wrap: wrap;
+	color: white;
 }
+
+.player__number {
+	font-weight: bold;
+}
+.player__name {
+	font-style: italic;
+	font-weight: bold;
+	margin-left: 1rem;
+}
+.word__emph {
+	font-weight: bold;
+}
+
 /* navigation */
-.header__nav {
+.nav__container {
+	position: sticky;
+	top: 0%;
+}
+.top__nav {
 	height: 5rem;
 	background-color: black;
 	display: grid;
 	grid-template-columns: auto 1fr;
 	position: sticky;
-	top: 0;
+	top: 0%;
 	align-items: center;
 }
 .nav__logo {
-	border: 1px solid red;
+	/* border: 1px solid red; */
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -260,20 +284,38 @@ header {
 #burger__check {
 	display: none;
 }
-
-/* intro */
-
-.header__description {
-	min-height: 15rem;
-	overflow: auto;
+.test {
+	font-weight: bold;
+	background-color: var(--main-red);
 	color: black;
-	/* background: url(../images/black-abstract-casino-background-with-playing-cards-signs-grey-symbols-on-black-background-casino-symbols-vector.jpg); */
+	padding: 0.3rem;
+	font-size: 1.2rem;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+.player__balance {
+	font-size: 1.3rem;
+	background-color: rgb(228, 211, 211, 0.5);
+	margin-left: 1rem;
+	margin-right: 1rem;
+}
+/* quoteBlock */
+
+.quote__container {
+	min-height: 15rem;
+	overflow: hidden;
+	color: black;
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
-.header__quote {
-	text-align: center;
+.quote {
+	flex-grow: 1;
 	font-size: 1.3rem;
 }
 .quote__text {
@@ -281,13 +323,23 @@ header {
 .quote__author {
 	font-weight: bold;
 }
-.header__svg-hor {
+.svg__hor--red {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	margin-bottom: 1rem;
 }
 
-.header__about {
+/* gameBlock */
+
+.game {
+	background-color: lightslategray;
+	height: 40vh;
+}
+
+/* next content */
+
+.about {
 	border: 2px solid green;
 	height: 50rem;
 	background: url(../images/Screenshot\ 2022-02-07\ 021103.png);
@@ -303,6 +355,17 @@ header {
 }
 .noOpacity {
 	opacity: 0;
+}
+
+/* Footer */
+.footer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: black;
+	color: white;
+	height: 15rem;
 }
 
 /* Animations */
@@ -366,6 +429,18 @@ header {
 	}
 }
 
+.fadeIn {
+	animation: fadeIn 3s ease-in;
+}
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
 @media only screen and (max-width: 800px) {
 	.nav__ul {
 		position: absolute;
@@ -375,12 +450,12 @@ header {
 		background-color: black;
 		padding: 1rem;
 		width: 14rem;
-		top: 4rem;
+		top: 6.3rem;
 		left: -20rem;
 
 		transition: all ease-in-out 0.4s;
 	}
-	.header__nav {
+	.top__nav {
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
@@ -453,7 +528,11 @@ header {
 
 	#burger__check:checked ~ .nav__ul {
 		transition: all ease-in-out 0.4s;
+		z-index: 10;
 
 		transform: translateX(20rem);
+	}
+	.player__balance {
+		display: block;
 	}
 }

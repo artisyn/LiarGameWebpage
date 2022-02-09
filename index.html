@@ -62,10 +62,8 @@
 						<div class="tilted-border">
 							<input
 								placeholder="username"
-								class="input login__username"
+								class="login__username"
 								type="text"
-								name=""
-								id=""
 							/>
 						</div>
 
@@ -87,10 +85,8 @@
 						<div class="tilted-border">
 							<input
 								placeholder="password"
-								class="input login__password"
+								class="login__password"
 								type="password"
-								name=""
-								id=""
 							/>
 						</div>
 					</div>
@@ -109,9 +105,19 @@
 				<span class="bigLetter">G</span>ame
 			</h1>
 		</div>
+		<!-- displayNone noOpacity -->
 		<div class="mainWrapper">
 			<header>
-				<nav class="header__nav">
+				<div class="user__info--name">
+					Liar No. <span class="player__number">6</span>,
+					<span class="player__name"> John Doe </span>
+				</div>
+				<div class="user__info--balance">
+					Best of <span class="word__emph">luck</span>
+				</div>
+			</header>
+			<div class="nav__container">
+				<nav class="top__nav">
 					<div class="nav__logo">
 						<span class="letter__red">L</span>iar
 						<span class="letter__red">G</span>ame
@@ -129,95 +135,267 @@
 						</ul>
 					</label>
 				</nav>
-				<section class="header__description">
-					<figure class="header__quote">
-						<blockquote class="quote__text">
-							"Don't succumb to panic. Only those who see the
-							bigger picture win."
-						</blockquote>
-						<figcaption>
-							&mdash;
-							<span class="quote__author">Akiyama Shinichi</span>,
-							<cite class="quote__origin">Liar Game</cite>
-						</figcaption>
-					</figure>
+				<div class="test">
+					Balance: <span class="player__balance">100 000 000</span>
+				</div>
+			</div>
 
-					<i class="header__svg-hor"
-						><svg
-							width="800"
-							height="15"
-							viewBox="0 0 1210 52"
-							fill="none"
-							xmlns="http://www.w3.org/2000/svg"
-						>
-							<path
-								d="M605 1L619.695 5.77457L628.776 18.2746V33.7254L619.695 46.2254L605 51L590.305 46.2254L581.224 33.7254V18.2746L590.305 5.77457L605 1Z"
-								fill="#B90000"
-							/>
-							<path
-								d="M630.342 26L680.105 1.04049L812.962 26L680.105 50.9595L630.342 26Z"
-								fill="#B90000"
-							/>
-							<path
-								d="M814.039 26L832.865 1.17741L1206.06 26L832.865 50.8226L814.039 26Z"
-								fill="#B90000"
-							/>
-							<path
-								d="M579.658 26L529.895 1.04049L397.038 26L529.895 50.9595L579.658 26Z"
-								fill="#B90000"
-							/>
-							<path
-								d="M395.961 26L377.135 1.17741L3.93835 26L377.135 50.8226L395.961 26Z"
-								fill="#B90000"
-							/>
-							<path
-								d="M680.186 1L680.105 1.04049M680.105 1.04049L630.342 26M680.105 1.04049L812.962 26M680.105 1.04049L680.013 1.02327M630.342 26L630 26.1717M630.342 26L630 25.8283M630.342 26L680.105 50.9595M680.105 50.9595L680.186 51M680.105 50.9595L680.013 50.9767M680.105 50.9595L812.962 26M812.962 26L814 25.805M812.962 26L814 26.195M833 1L832.865 1.17741M832.865 1.17741L814.039 26M832.865 1.17741L1206.06 26M832.865 1.17741L832.358 1.14364M814.039 26L814 26.0518M814.039 26L814 25.9482M814.039 26L832.865 50.8226M832.865 50.8226L833 51M832.865 50.8226L832.358 50.8564M832.865 50.8226L1206.06 26M1206.06 26L1209 25.8046M1206.06 26L1209 26.1954M529.814 1L529.895 1.04049M529.895 1.04049L579.658 26M529.895 1.04049L397.038 26M529.895 1.04049L529.987 1.02327M579.658 26L580 26.1717M579.658 26L580 25.8283M579.658 26L529.895 50.9595M529.895 50.9595L529.814 51M529.895 50.9595L529.987 50.9767M529.895 50.9595L397.038 26M397.038 26L396 25.805M397.038 26L396 26.195M377 1L377.135 1.17741M377.135 1.17741L395.961 26M377.135 1.17741L3.93835 26M377.135 1.17741L377.642 1.14364M395.961 26L396 26.0518M395.961 26L396 25.9482M395.961 26L377.135 50.8226M377.135 50.8226L377 51M377.135 50.8226L377.642 50.8564M377.135 50.8226L3.93835 26M3.93835 26L1 25.8046M3.93835 26L1.00006 26.1954M605 1L619.695 5.77457L628.776 18.2746V33.7254L619.695 46.2254L605 51L590.305 46.2254L581.224 33.7254V18.2746L590.305 5.77457L605 1Z"
-								stroke="#B90000"
-							/>
-						</svg>
-					</i>
-				</section>
-				<section class="header__about">
-					<h1 class="about__title"></h1>
-					<p class="about__text"></p>
-				</section>
-			</header>
-			<section class="carousel">
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-				Ducimus consequatur hic maiores! Omnis alias beatae consequatur
-				magnam eius placeat accusamus iste! Quaerat tempora ipsa dolorum
-				fugit corrupti obcaecati nisi perferendis. Lorem ipsum dolor sit
-				amet, consectetur adipisicing elit. Ducimus consequatur hic
-				maiores! Omnis alias beatae consequatur magnam eius placeat
-				accusamus iste! Quaerat tempora ipsa dolorum fugit corrupti
-				obcaecati nisi perferendis. Lorem ipsum dolor sit amet,
-				consectetur adipisicing elit. Ducimus consequatur hic maiores!
-				Omnis alias beatae consequatur magnam eius placeat accusamus
-				iste! Quaerat tempora ipsa dolorum fugit corrupti obcaecati nisi
-				perferendis. Lorem ipsum dolor sit amet, consectetur adipisicing
-				elit. Ducimus consequatur hic maiores! Omnis alias beatae
-				consequatur magnam eius placeat accusamus iste! Quaerat tempora
-				ipsa dolorum fugit corrupti obcaecati nisi perferendis. Lorem
-				ipsum dolor sit amet, consectetur adipisicing elit. Ducimus
-				consequatur hic maiores! Omnis alias beatae consequatur magnam
-				eius placeat accusamus iste! Quaerat tempora ipsa dolorum fugit
-				corrupti obcaecati nisi perferendis. Lorem ipsum dolor sit amet,
-				consectetur adipisicing elit. Ducimus consequatur hic maiores!
-				Omnis alias beatae consequatur magnam eius placeat accusamus
-				iste! Quaerat tempora ipsa dolorum fugit corrupti obcaecati nisi
-				perferendis. Lorem ipsum dolor sit amet, consectetur adipisicing
-				elit. Ducimus consequatur hic maiores! Omnis alias beatae
-				consequatur magnam eius placeat accusamus iste! Quaerat tempora
-				ipsa dolorum fugit corrupti obcaecati nisi perferendis. Lorem
-				ipsum dolor sit amet, consectetur adipisicing elit. Ducimus
-				consequatur hic maiores! Omnis alias beatae consequatur magnam
-				eius placeat accusamus iste! Quaerat tempora ipsa dolorum fugit
-				corrupti obcaecati nisi perferendis. Lorem ipsum dolor sit amet,
-				consectetur adipisicing elit. Ducimus consequatur hic maiores!
-				Omnis alias beatae consequatur magnam eius placeat accusamus
-				iste! Quaerat tempora ipsa dolorum fugit corrupti obcaecati nisi
-				perferendis.
+			<div class="quote__container">
+				<figure class="quote">
+					<blockquote class="quote__text">
+						“Don't succumb to panic. Only those who see the bigger
+						picture win.”
+					</blockquote>
+					<figcaption>
+						&mdash;
+						<span class="quote__author">Akiyama Shinichi</span>,
+						<cite class="quote__origin">Liar Game</cite>
+					</figcaption>
+				</figure>
+
+				<i class="svg__hor--red"
+					><svg
+						width="800"
+						height="12"
+						viewBox="0 0 1210 52"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<path
+							d="M605 1L619.695 5.77457L628.776 18.2746V33.7254L619.695 46.2254L605 51L590.305 46.2254L581.224 33.7254V18.2746L590.305 5.77457L605 1Z"
+							fill="#B90000"
+						/>
+						<path
+							d="M630.342 26L680.105 1.04049L812.962 26L680.105 50.9595L630.342 26Z"
+							fill="#B90000"
+						/>
+						<path
+							d="M814.039 26L832.865 1.17741L1206.06 26L832.865 50.8226L814.039 26Z"
+							fill="#B90000"
+						/>
+						<path
+							d="M579.658 26L529.895 1.04049L397.038 26L529.895 50.9595L579.658 26Z"
+							fill="#B90000"
+						/>
+						<path
+							d="M395.961 26L377.135 1.17741L3.93835 26L377.135 50.8226L395.961 26Z"
+							fill="#B90000"
+						/>
+						<path
+							d="M680.186 1L680.105 1.04049M680.105 1.04049L630.342 26M680.105 1.04049L812.962 26M680.105 1.04049L680.013 1.02327M630.342 26L630 26.1717M630.342 26L630 25.8283M630.342 26L680.105 50.9595M680.105 50.9595L680.186 51M680.105 50.9595L680.013 50.9767M680.105 50.9595L812.962 26M812.962 26L814 25.805M812.962 26L814 26.195M833 1L832.865 1.17741M832.865 1.17741L814.039 26M832.865 1.17741L1206.06 26M832.865 1.17741L832.358 1.14364M814.039 26L814 26.0518M814.039 26L814 25.9482M814.039 26L832.865 50.8226M832.865 50.8226L833 51M832.865 50.8226L832.358 50.8564M832.865 50.8226L1206.06 26M1206.06 26L1209 25.8046M1206.06 26L1209 26.1954M529.814 1L529.895 1.04049M529.895 1.04049L579.658 26M529.895 1.04049L397.038 26M529.895 1.04049L529.987 1.02327M579.658 26L580 26.1717M579.658 26L580 25.8283M579.658 26L529.895 50.9595M529.895 50.9595L529.814 51M529.895 50.9595L529.987 50.9767M529.895 50.9595L397.038 26M397.038 26L396 25.805M397.038 26L396 26.195M377 1L377.135 1.17741M377.135 1.17741L395.961 26M377.135 1.17741L3.93835 26M377.135 1.17741L377.642 1.14364M395.961 26L396 26.0518M395.961 26L396 25.9482M395.961 26L377.135 50.8226M377.135 50.8226L377 51M377.135 50.8226L377.642 50.8564M377.135 50.8226L3.93835 26M3.93835 26L1 25.8046M3.93835 26L1.00006 26.1954M605 1L619.695 5.77457L628.776 18.2746V33.7254L619.695 46.2254L605 51L590.305 46.2254L581.224 33.7254V18.2746L590.305 5.77457L605 1Z"
+							stroke="#B90000"
+						/>
+					</svg>
+				</i>
+			</div>
+			<section class="game game__one"></section>
+			<div class="quote__container">
+				<figure class="quote">
+					<blockquote class="quote__text">
+						“I believe that there's not a single person whose heart
+						is evil.”
+					</blockquote>
+					<figcaption>
+						&mdash;
+						<span class="quote__author">Kanzaki Nao</span>,
+						<cite class="quote__origin">Liar Game</cite>
+					</figcaption>
+				</figure>
+
+				<i class="svg__hor--red"
+					><svg
+						width="800"
+						height="12"
+						viewBox="0 0 1210 52"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<path
+							d="M605 1L619.695 5.77457L628.776 18.2746V33.7254L619.695 46.2254L605 51L590.305 46.2254L581.224 33.7254V18.2746L590.305 5.77457L605 1Z"
+							fill="#B90000"
+						/>
+						<path
+							d="M630.342 26L680.105 1.04049L812.962 26L680.105 50.9595L630.342 26Z"
+							fill="#B90000"
+						/>
+						<path
+							d="M814.039 26L832.865 1.17741L1206.06 26L832.865 50.8226L814.039 26Z"
+							fill="#B90000"
+						/>
+						<path
+							d="M579.658 26L529.895 1.04049L397.038 26L529.895 50.9595L579.658 26Z"
+							fill="#B90000"
+						/>
+						<path
+							d="M395.961 26L377.135 1.17741L3.93835 26L377.135 50.8226L395.961 26Z"
+							fill="#B90000"
+						/>
+						<path
+							d="M680.186 1L680.105 1.04049M680.105 1.04049L630.342 26M680.105 1.04049L812.962 26M680.105 1.04049L680.013 1.02327M630.342 26L630 26.1717M630.342 26L630 25.8283M630.342 26L680.105 50.9595M680.105 50.9595L680.186 51M680.105 50.9595L680.013 50.9767M680.105 50.9595L812.962 26M812.962 26L814 25.805M812.962 26L814 26.195M833 1L832.865 1.17741M832.865 1.17741L814.039 26M832.865 1.17741L1206.06 26M832.865 1.17741L832.358 1.14364M814.039 26L814 26.0518M814.039 26L814 25.9482M814.039 26L832.865 50.8226M832.865 50.8226L833 51M832.865 50.8226L832.358 50.8564M832.865 50.8226L1206.06 26M1206.06 26L1209 25.8046M1206.06 26L1209 26.1954M529.814 1L529.895 1.04049M529.895 1.04049L579.658 26M529.895 1.04049L397.038 26M529.895 1.04049L529.987 1.02327M579.658 26L580 26.1717M579.658 26L580 25.8283M579.658 26L529.895 50.9595M529.895 50.9595L529.814 51M529.895 50.9595L529.987 50.9767M529.895 50.9595L397.038 26M397.038 26L396 25.805M397.038 26L396 26.195M377 1L377.135 1.17741M377.135 1.17741L395.961 26M377.135 1.17741L3.93835 26M377.135 1.17741L377.642 1.14364M395.961 26L396 26.0518M395.961 26L396 25.9482M395.961 26L377.135 50.8226M377.135 50.8226L377 51M377.135 50.8226L377.642 50.8564M377.135 50.8226L3.93835 26M3.93835 26L1 25.8046M3.93835 26L1.00006 26.1954M605 1L619.695 5.77457L628.776 18.2746V33.7254L619.695 46.2254L605 51L590.305 46.2254L581.224 33.7254V18.2746L590.305 5.77457L605 1Z"
+							stroke="#B90000"
+						/>
+					</svg>
+				</i>
+			</div>
+			<section class="game game__one"></section>
+			<div class="quote__container">
+				<figure class="quote">
+					<blockquote class="quote__text">
+						“People SHOULD be doubted… Doubting people is simply a
+						part of trying to know them.”
+					</blockquote>
+					<figcaption>
+						&mdash;
+						<span class="quote__author">Akiyama Shinichi</span>,
+						<cite class="quote__origin">Liar Game</cite>
+					</figcaption>
+				</figure>
+
+				<i class="svg__hor--red"
+					><svg
+						width="800"
+						height="12"
+						viewBox="0 0 1210 52"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<path
+							d="M605 1L619.695 5.77457L628.776 18.2746V33.7254L619.695 46.2254L605 51L590.305 46.2254L581.224 33.7254V18.2746L590.305 5.77457L605 1Z"
+							fill="#B90000"
+						/>
+						<path
+							d="M630.342 26L680.105 1.04049L812.962 26L680.105 50.9595L630.342 26Z"
+							fill="#B90000"
+						/>
+						<path
+							d="M814.039 26L832.865 1.17741L1206.06 26L832.865 50.8226L814.039 26Z"
+							fill="#B90000"
+						/>
+						<path
+							d="M579.658 26L529.895 1.04049L397.038 26L529.895 50.9595L579.658 26Z"
+							fill="#B90000"
+						/>
+						<path
+							d="M395.961 26L377.135 1.17741L3.93835 26L377.135 50.8226L395.961 26Z"
+							fill="#B90000"
+						/>
+						<path
+							d="M680.186 1L680.105 1.04049M680.105 1.04049L630.342 26M680.105 1.04049L812.962 26M680.105 1.04049L680.013 1.02327M630.342 26L630 26.1717M630.342 26L630 25.8283M630.342 26L680.105 50.9595M680.105 50.9595L680.186 51M680.105 50.9595L680.013 50.9767M680.105 50.9595L812.962 26M812.962 26L814 25.805M812.962 26L814 26.195M833 1L832.865 1.17741M832.865 1.17741L814.039 26M832.865 1.17741L1206.06 26M832.865 1.17741L832.358 1.14364M814.039 26L814 26.0518M814.039 26L814 25.9482M814.039 26L832.865 50.8226M832.865 50.8226L833 51M832.865 50.8226L832.358 50.8564M832.865 50.8226L1206.06 26M1206.06 26L1209 25.8046M1206.06 26L1209 26.1954M529.814 1L529.895 1.04049M529.895 1.04049L579.658 26M529.895 1.04049L397.038 26M529.895 1.04049L529.987 1.02327M579.658 26L580 26.1717M579.658 26L580 25.8283M579.658 26L529.895 50.9595M529.895 50.9595L529.814 51M529.895 50.9595L529.987 50.9767M529.895 50.9595L397.038 26M397.038 26L396 25.805M397.038 26L396 26.195M377 1L377.135 1.17741M377.135 1.17741L395.961 26M377.135 1.17741L3.93835 26M377.135 1.17741L377.642 1.14364M395.961 26L396 26.0518M395.961 26L396 25.9482M395.961 26L377.135 50.8226M377.135 50.8226L377 51M377.135 50.8226L377.642 50.8564M377.135 50.8226L3.93835 26M3.93835 26L1 25.8046M3.93835 26L1.00006 26.1954M605 1L619.695 5.77457L628.776 18.2746V33.7254L619.695 46.2254L605 51L590.305 46.2254L581.224 33.7254V18.2746L590.305 5.77457L605 1Z"
+							stroke="#B90000"
+						/>
+					</svg>
+				</i>
+			</div>
+			<section class="game game__two"></section>
+			<div class="quote__container">
+				<figure class="quote">
+					<blockquote class="quote__text">
+						“Saying humans can't be trusted, please never use such
+						words again!”
+					</blockquote>
+					<figcaption>
+						&mdash;
+						<span class="quote__author">Kanzaki Nao</span>,
+						<cite class="quote__origin">Liar Game</cite>
+					</figcaption>
+				</figure>
+
+				<i class="svg__hor--red"
+					><svg
+						width="800"
+						height="12"
+						viewBox="0 0 1210 52"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<path
+							d="M605 1L619.695 5.77457L628.776 18.2746V33.7254L619.695 46.2254L605 51L590.305 46.2254L581.224 33.7254V18.2746L590.305 5.77457L605 1Z"
+							fill="#B90000"
+						/>
+						<path
+							d="M630.342 26L680.105 1.04049L812.962 26L680.105 50.9595L630.342 26Z"
+							fill="#B90000"
+						/>
+						<path
+							d="M814.039 26L832.865 1.17741L1206.06 26L832.865 50.8226L814.039 26Z"
+							fill="#B90000"
+						/>
+						<path
+							d="M579.658 26L529.895 1.04049L397.038 26L529.895 50.9595L579.658 26Z"
+							fill="#B90000"
+						/>
+						<path
+							d="M395.961 26L377.135 1.17741L3.93835 26L377.135 50.8226L395.961 26Z"
+							fill="#B90000"
+						/>
+						<path
+							d="M680.186 1L680.105 1.04049M680.105 1.04049L630.342 26M680.105 1.04049L812.962 26M680.105 1.04049L680.013 1.02327M630.342 26L630 26.1717M630.342 26L630 25.8283M630.342 26L680.105 50.9595M680.105 50.9595L680.186 51M680.105 50.9595L680.013 50.9767M680.105 50.9595L812.962 26M812.962 26L814 25.805M812.962 26L814 26.195M833 1L832.865 1.17741M832.865 1.17741L814.039 26M832.865 1.17741L1206.06 26M832.865 1.17741L832.358 1.14364M814.039 26L814 26.0518M814.039 26L814 25.9482M814.039 26L832.865 50.8226M832.865 50.8226L833 51M832.865 50.8226L832.358 50.8564M832.865 50.8226L1206.06 26M1206.06 26L1209 25.8046M1206.06 26L1209 26.1954M529.814 1L529.895 1.04049M529.895 1.04049L579.658 26M529.895 1.04049L397.038 26M529.895 1.04049L529.987 1.02327M579.658 26L580 26.1717M579.658 26L580 25.8283M579.658 26L529.895 50.9595M529.895 50.9595L529.814 51M529.895 50.9595L529.987 50.9767M529.895 50.9595L397.038 26M397.038 26L396 25.805M397.038 26L396 26.195M377 1L377.135 1.17741M377.135 1.17741L395.961 26M377.135 1.17741L3.93835 26M377.135 1.17741L377.642 1.14364M395.961 26L396 26.0518M395.961 26L396 25.9482M395.961 26L377.135 50.8226M377.135 50.8226L377 51M377.135 50.8226L377.642 50.8564M377.135 50.8226L3.93835 26M3.93835 26L1 25.8046M3.93835 26L1.00006 26.1954M605 1L619.695 5.77457L628.776 18.2746V33.7254L619.695 46.2254L605 51L590.305 46.2254L581.224 33.7254V18.2746L590.305 5.77457L605 1Z"
+							stroke="#B90000"
+						/>
+					</svg>
+				</i>
+			</div>
+			<section class="game game__three"></section>
+			<div class="quote__container">
+				<figure class="quote">
+					<blockquote class="quote__text">
+						"Don't succumb to panic. Only those who see the bigger
+						picture win."
+					</blockquote>
+					<figcaption>
+						&mdash;
+						<span class="quote__author">Akiyama Shinichi</span>,
+						<cite class="quote__origin">Liar Game</cite>
+					</figcaption>
+				</figure>
+
+				<i class="svg__hor--red"
+					><svg
+						width="800"
+						height="12"
+						viewBox="0 0 1210 52"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<path
+							d="M605 1L619.695 5.77457L628.776 18.2746V33.7254L619.695 46.2254L605 51L590.305 46.2254L581.224 33.7254V18.2746L590.305 5.77457L605 1Z"
+							fill="#B90000"
+						/>
+						<path
+							d="M630.342 26L680.105 1.04049L812.962 26L680.105 50.9595L630.342 26Z"
+							fill="#B90000"
+						/>
+						<path
+							d="M814.039 26L832.865 1.17741L1206.06 26L832.865 50.8226L814.039 26Z"
+							fill="#B90000"
+						/>
+						<path
+							d="M579.658 26L529.895 1.04049L397.038 26L529.895 50.9595L579.658 26Z"
+							fill="#B90000"
+						/>
+						<path
+							d="M395.961 26L377.135 1.17741L3.93835 26L377.135 50.8226L395.961 26Z"
+							fill="#B90000"
+						/>
+						<path
+							d="M680.186 1L680.105 1.04049M680.105 1.04049L630.342 26M680.105 1.04049L812.962 26M680.105 1.04049L680.013 1.02327M630.342 26L630 26.1717M630.342 26L630 25.8283M630.342 26L680.105 50.9595M680.105 50.9595L680.186 51M680.105 50.9595L680.013 50.9767M680.105 50.9595L812.962 26M812.962 26L814 25.805M812.962 26L814 26.195M833 1L832.865 1.17741M832.865 1.17741L814.039 26M832.865 1.17741L1206.06 26M832.865 1.17741L832.358 1.14364M814.039 26L814 26.0518M814.039 26L814 25.9482M814.039 26L832.865 50.8226M832.865 50.8226L833 51M832.865 50.8226L832.358 50.8564M832.865 50.8226L1206.06 26M1206.06 26L1209 25.8046M1206.06 26L1209 26.1954M529.814 1L529.895 1.04049M529.895 1.04049L579.658 26M529.895 1.04049L397.038 26M529.895 1.04049L529.987 1.02327M579.658 26L580 26.1717M579.658 26L580 25.8283M579.658 26L529.895 50.9595M529.895 50.9595L529.814 51M529.895 50.9595L529.987 50.9767M529.895 50.9595L397.038 26M397.038 26L396 25.805M397.038 26L396 26.195M377 1L377.135 1.17741M377.135 1.17741L395.961 26M377.135 1.17741L3.93835 26M377.135 1.17741L377.642 1.14364M395.961 26L396 26.0518M395.961 26L396 25.9482M395.961 26L377.135 50.8226M377.135 50.8226L377 51M377.135 50.8226L377.642 50.8564M377.135 50.8226L3.93835 26M3.93835 26L1 25.8046M3.93835 26L1.00006 26.1954M605 1L619.695 5.77457L628.776 18.2746V33.7254L619.695 46.2254L605 51L590.305 46.2254L581.224 33.7254V18.2746L590.305 5.77457L605 1Z"
+							stroke="#B90000"
+						/>
+					</svg>
+				</i>
+			</div>
+			<section class="game game__four"></section>
+
+			<section class="about">
+				<h1 class="about__title">About Liar Game</h1>
+				<p class="about__text">
+					footer section, info about the game cards with main
+					characters and their background, expand on hover, more info
+					on click.\ also some info on me, contacts etc
+				</p>
 			</section>
+
+			<footer class="footer">Footer contacts social media</footer>
 		</div>
 	</body>
 </html>
