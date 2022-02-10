@@ -6,8 +6,15 @@ const loginWrapper = document.querySelector('.loginWrapper');
 const welcomeMessage = document.querySelector('.login__welcome-msg');
 const wrongPassMsg = document.querySelector('.login__wrong-pass');
 const mainWrapper = document.querySelector('.mainWrapper');
+const displayBalance = document.querySelector('.player__balance');
 
 const gameInterface = document.querySelectorAll('.game__interface');
+const playBtn = document.querySelectorAll('.btn__play');
+const betBtn = document.querySelectorAll('.btn__bet');
+
+//main login components
+let playerBalance = 100000000;
+// displayBalance
 
 // Game zero
 const gameZeroQuestions = [
@@ -85,6 +92,15 @@ loginBtn.addEventListener('click', (e) => {
 });
 
 // game buttons logic
+// Helping functions
+const updateBalanceBet = (betAmount) => {
+  playerBalance -= betAmount;
+  displayBalance.innerText = +playerBalance;
+};
+const updateBalanceWin = (winAmount) => {
+  playerBalance += winAmount;
+  displayBalance.innerText = +playerBalance;
+};
 
 const showGameButtons = (el) => {
   Array.from(el.children).forEach((el) => {
@@ -96,9 +112,40 @@ const showGameButtons = (el) => {
     });
   }, 500);
 };
+const revealGameHideBet = (target) => {
+  const parent = target.closest('section');
+  const gameContainer = parent.querySelector('.game__container');
+  const gameInterface = parent.querySelector('.game__interface');
+  console.log(parent, gameContainer);
+  gameContainer.classList.remove('noOpacity', 'noClick');
+  setTimeout(() => {
+    gameInterface.classList.add('noOpacity', 'noClick');
+  }, 1000);
+};
+
+const placeBet = (target) => {
+  const parent = target.closest('section');
+  const betAmount = parent.querySelector('.money__input').value;
+  const betDisplay = parent.querySelector('.bet__amount');
+  betDisplay.innerText = +betDisplay.innerText + +betAmount;
+  updateBalanceBet(betAmount);
+};
+
 gameInterface.forEach((button) => {
   button.addEventListener('click', function (e) {
     if (e.target.classList.contains('btn__participate')) showGameButtons(this);
-    // console.log(this);
+  });
+});
+
+playBtn.forEach((btn) => {
+  btn.addEventListener('click', function (e) {
+    //selecting the whole parent
+    revealGameHideBet(e.target);
+  });
+});
+
+betBtn.forEach((btn) => {
+  btn.addEventListener('click', function (e) {
+    placeBet(e.target);
   });
 });
