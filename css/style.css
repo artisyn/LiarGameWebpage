@@ -5,6 +5,12 @@
 }
 :root {
 	--main-red: rgb(167, 37, 9, 1);
+	--main-red-light: rgb(167, 37, 9, 0.5);
+	--game-zero: #95afc1;
+	--game-one: #95afc1;
+	--game-two: #f1f1e6;
+	--game-three: #95afc1;
+	--game-four: #9baebc;
 }
 html,
 body {
@@ -23,6 +29,17 @@ body {
 
 .input {
 }
+/* firefox */
+input[type='number'] {
+	-moz-appearance: textfield;
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
 .btn {
 }
 .letter__red {
@@ -244,6 +261,7 @@ header {
 	color: white;
 	font-style: italic;
 	font-size: 3rem;
+	margin-left: 1rem;
 }
 .nav__ul {
 	/* border: 1px solid yellow; */
@@ -334,8 +352,8 @@ header {
 
 .game {
 	padding: 1rem;
-	background-color: lightslategray;
-	height: 40vh;
+	/* background-color: #2f4858; */
+	height: fit-content;
 }
 .game__title {
 	text-align: center;
@@ -346,6 +364,141 @@ header {
 .game__name {
 	text-decoration-line: overline;
 	text-decoration-color: var(--main-red);
+}
+.game__interface {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.5rem;
+}
+
+.btn__participate {
+	background-color: transparent;
+	font-size: 1.3rem;
+	font-weight: bold;
+	outline: none;
+	padding: 0.3rem;
+	border: 2px solid var(--main-red);
+	letter-spacing: 0.2rem;
+	cursor: pointer;
+	transition: all ease 0.3s;
+}
+.btn__participate:hover {
+	background-color: var(--main-red-light);
+	color: white;
+	letter-spacing: 0.15rem;
+}
+
+.money__input {
+	transition: all ease 0.3s;
+	border: 2px solid var(--main-red);
+	font-size: 1.3rem;
+	font-weight: bold;
+	width: 8rem;
+	height: 2.4rem;
+	outline: none;
+	background-color: transparent;
+	appearance: none;
+}
+.money__input:focus {
+	background-color: var(--main-red-light);
+	color: white;
+}
+.btn__bet {
+	transition: all ease 0.3s;
+	background-color: transparent;
+	font-size: 1.3rem;
+	font-weight: bold;
+	outline: none;
+	padding: 0.3rem;
+	border: 2px solid var(--main-red);
+	letter-spacing: 0.2rem;
+	cursor: pointer;
+	width: 5rem;
+}
+.btn__bet:hover {
+	background-color: var(--main-red-light);
+	color: white;
+	letter-spacing: 0.15rem;
+}
+.btn__play {
+	transition: all ease 0.3s;
+	background-color: transparent;
+	font-size: 1.3rem;
+	font-weight: bold;
+	outline: none;
+	padding: 0.3rem;
+	border: 2px solid var(--main-red);
+	letter-spacing: 0.2rem;
+	cursor: pointer;
+	width: 5rem;
+}
+.btn__play:hover {
+	background-color: var(--main-red-light);
+	color: white;
+	letter-spacing: 0.15rem;
+}
+.game__container {
+	border: 2px solid white;
+	height: 20rem;
+	border-radius: 0.3rem;
+	padding: 1rem;
+}
+.bet__container {
+	display: flex;
+	justify-content: right;
+}
+.balance__bet {
+	border: 2px solid var(--main-red);
+	border-radius: 0.2rem;
+	background-color: var(--main-red-light);
+	width: 15rem;
+	padding: 0.2rem;
+	font-style: italic;
+}
+.bet__amount {
+	color: white;
+	margin-left: 0.5rem;
+}
+
+/* Game Zero */
+
+.game__zero {
+	background-color: var(--game-zero);
+}
+
+.game__zero-title {
+	text-align: center;
+	font-size: 1.3rem;
+	font-weight: bold;
+}
+.g0__question {
+	border: 1px solid black;
+}
+.g0__icon img {
+	max-width: 100%;
+}
+.g0__icon {
+	border: 1px solid white;
+	border-radius: 1rem;
+	overflow: hidden;
+	width: 70px;
+	height: 70px;
+}
+
+/* Game one */
+.game__one {
+	background-color: var(--game-one);
+}
+
+.game__two {
+	background-color: var(--game-two);
+}
+.game__three {
+	background-color: var(--game-three);
+}
+.game__four {
+	background-color: var(--game-four);
 }
 
 /* next content */
@@ -593,6 +746,7 @@ header {
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		cursor: pointer;
 		/* position: relative; */
 	}
 
