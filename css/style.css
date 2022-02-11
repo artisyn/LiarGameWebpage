@@ -11,6 +11,8 @@
 	--game-two: #f1f1e6;
 	--game-three: #95afc1;
 	--game-four: #9baebc;
+	--loose-color: rgb(198, 179, 178, 1);
+	--win-color: #a2b98c;
 }
 html,
 body {
@@ -71,6 +73,12 @@ input::-webkit-inner-spin-button {
 	transform: rotate(0deg);
 	transition: all ease-in 0.4s;
 	background: transparent;
+}
+.win__color {
+	background-color: var(--win-color);
+}
+.loose__color {
+	background-color: var(--loose-color);
 }
 
 /* User Login */
@@ -494,6 +502,7 @@ header {
 	align-items: center;
 	justify-content: center;
 	flex-basis: 25rem;
+	min-height: 15rem;
 	background-color: var(--game-zero);
 	text-align: center;
 	transition: all ease 0.4s;
@@ -509,19 +518,32 @@ header {
 	max-width: 100%;
 }
 .g0__icon {
+	position: relative;
 	border: 1px solid white;
 	border-radius: 1rem;
 	overflow: hidden;
 	width: 100px;
 	height: 100px;
+	pointer-events: none;
+	z-index: 1;
+}
+.expose__liar {
+	position: absolute;
+	font-size: 10rem;
+	background-color: var(--main-red);
+	color: black;
+	font-weight: bold;
+	font-style: italic;
+	z-index: 10;
+	top: 0;
 }
 .g0__text {
 	font-weight: bold;
+	pointer-events: none;
 }
 .g0__result {
 	border: 3px solid var(--main-red);
 	font-size: 1.3rem;
-	background-color: rgb(153, 112, 105);
 	margin: 0 auto;
 	margin-top: 1rem;
 	text-align: center;

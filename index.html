@@ -15,7 +15,8 @@
 		<title>Liar Game</title>
 	</head>
 	<body>
-		<div class="loginWrapper">
+		<!-- displayNone -->
+		<div class="loginWrapper displayNone">
 			<div class="login__background"></div>
 			<div class="login">
 				<div class="login__clue">There is a password clue here</div>
@@ -64,6 +65,7 @@
 								placeholder="username"
 								class="login__username"
 								type="text"
+								maxlength="16"
 							/>
 						</div>
 
@@ -106,7 +108,7 @@
 			</h1>
 		</div>
 		<!-- displayNone noOpacity -->
-		<div class="mainWrapper displayNone noOpacity">
+		<div class="mainWrapper">
 			<header>
 				<div class="user__info--name">
 					Liar No. <span class="player__number">6</span>,
@@ -201,7 +203,10 @@
 						placeholder=" all in?"
 					/>
 					<button class="btn__bet displayNone noOpacity">bet</button>
-					<button class="btn__play displayNone noOpacity">
+					<button
+						class="btn__play displayNone noOpacity"
+						data-game-number="0"
+					>
 						play
 					</button>
 				</div>
@@ -211,11 +216,11 @@
 					</div>
 				</div>
 
-				<div class="game__container noOpacity noClick">
+				<div class="game__container cont0 noOpacity noClick">
 					<div class="game__zero-title">
 						Can you spot the <span class="letter__red">liar</span>?
 					</div>
-					<div class="questions__blockg0">
+					<!-- <div class="questions__blockg0">
 						<div class="g0__question g0_q1">
 							<div class="g0__icon">
 								<img src="./images/face1.jpg" alt="face" />
@@ -244,14 +249,14 @@
 								adipisicing elit. Cum temporibus nulla laborum!
 							</p>
 						</div>
-					</div>
-					<div class="g0__result" data-correct="">
+					</div> -->
+					<!-- <div class="g0__result" data-correct="">
 						<span class="g0__result-text"
 							>Congratulations! You won:
 						</span>
 						<span class="g0__result-amount">1000</span>
 						<span> You may proceed to the next <span class="letter__red">game</span>. 
-					</div>
+					</div> -->
 				</div>
 			</section>
 			<div class="quote__container">
