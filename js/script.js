@@ -204,12 +204,11 @@ const gameZero = (gameContainer) => {
 
   // create an array of logoNumbers
   let logosArr = logosArrayfromNum(5); // logos amount is hardcoded inside function
-  console.log(logosArr);
-  console.log(gameZeroQuestions);
+
   // pick question obj
   let questionsObj =
     gameZeroQuestions[Math.floor(Math.random() * gameZeroQuestions.length)];
-  console.log(questionsObj);
+
   const qArr = [];
   Object.entries(questionsObj).forEach(([key, value]) => {
     qArr.push([key, value]);
@@ -223,30 +222,33 @@ const gameZero = (gameContainer) => {
 						<div class="g0__question g0_q1" data-answer="${preparedQuestions[0][0]}" >
 							<div class="g0__icon">
 								<img src="./images/face${logosArr[0]}.jpg" alt="face" />
-                <span class="expose__liar">liar</span>
+                
 							</div>
 							<p class="g0__text">
               ${preparedQuestions[0][1]}
 							</p>
+              <div class="expose__liar noOpacity">liar</div>
 						</div>
 						<div class="g0__question g0_q2" data-answer="${preparedQuestions[1][0]}">
 							<div class="g0__icon">
 								<img src="./images/face${logosArr[1]}.jpg" alt="face" />
-                <span class="expose__liar">liar</span>
+               
 							</div>
 
 							<p class="g0__text">
 								${preparedQuestions[1][1]}
 							</p>
+              <div class="expose__liar noOpacity">liar</div>
 						</div>
 						<div class="g0__question g0_q3" data-answer="${preparedQuestions[2][0]}">
 							<div class="g0__icon">
 								<img src="./images/face${logosArr[2]}.jpg" alt="face" />
-                <span class="expose__liar">liar</span>
+                
 							</div>
 							<p class="g0__text">
 								${preparedQuestions[2][1]}
 							</p>
+              <div class="expose__liar noOpacity">liar</div>
 						</div>
 					</div>
           
@@ -256,21 +258,19 @@ const gameZero = (gameContainer) => {
   // adding click logic
   gameContainer.querySelectorAll('.g0__question').forEach((question) => {
     question.addEventListener('click', (e) => {
-      console.log(e.target);
-
       if (e.target.dataset.answer === 'incorrect') {
         winGame();
-        e.target.style.backgroundColor = 'rgb(153, 112, 105)';
       }
 
       if (e.target.dataset.answer !== 'incorrect') {
         looseGame();
-        e.target.style.backgroundColor = 'rgb(153, 112, 105)';
       }
 
       gameContainer.querySelectorAll('.g0__question').forEach((question) => {
         if (question.dataset.answer === 'incorrect') {
           //// liar icon
+
+          question.querySelector('.expose__liar').classList.remove('noOpacity');
         }
       });
     });

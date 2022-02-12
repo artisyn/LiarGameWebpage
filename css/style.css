@@ -6,13 +6,48 @@
 :root {
 	--main-red: rgb(167, 37, 9, 1);
 	--main-red-light: rgb(167, 37, 9, 0.5);
-	--game-zero: #95afc1;
+	--game-zero: linear-gradient(
+		to top,
+		#fdf7f2,
+		#f3e6d9,
+		#e7d5c0,
+		#dac5a7,
+		#ccb58f
+	);
 	--game-one: #95afc1;
 	--game-two: #f1f1e6;
 	--game-three: #95afc1;
 	--game-four: #9baebc;
 	--loose-color: rgb(198, 179, 178, 1);
 	--win-color: #a2b98c;
+	--grad-1: linear-gradient(
+		90deg,
+		rgba(152, 50, 17, 1) 0%,
+		rgba(178, 50, 74, 1) 100%
+	);
+	--grad-2: linear-gradient(
+		90deg,
+		rgba(255, 247, 242, 1) 0%,
+		rgba(210, 180, 140, 1) 100%
+	);
+	--grad-3: linear-gradient(
+		9deg,
+		rgba(189, 166, 159, 1) 0%,
+		rgba(170, 41, 0, 1) 100%
+	);
+	--grad-4: radial-gradient(
+		circle,
+		rgba(163, 207, 205, 1) 0%,
+		rgba(218, 197, 187, 1) 100%
+	);
+	--grad-4: linear-gradient(
+		to bottom,
+		#fdf7f2,
+		#f3e6d9,
+		#e7d5c0,
+		#dac5a7,
+		#ccb58f
+	);
 }
 html,
 body {
@@ -251,6 +286,7 @@ header {
 .nav__container {
 	position: sticky;
 	top: 0%;
+	z-index: 10;
 }
 .top__nav {
 	height: 5rem;
@@ -339,9 +375,9 @@ header {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	background-color: rgb(152, 50, 17, 0.2);
 }
 .quote {
-	flex-grow: 1;
 	font-size: 1.3rem;
 }
 .quote__text {
@@ -353,10 +389,25 @@ header {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	margin-bottom: 1rem;
 }
 
-/* gameBlock */
+/* transition block */
+.transition {
+	height: 3rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: linear-gradient(
+		to bottom,
+		#e8d8d1,
+		#e4cec1,
+		#dec5b0,
+		#d6bda0,
+		#ccb58f
+	);
+}
+
+/* game block */
 
 .game {
 	padding: 1rem;
@@ -477,7 +528,7 @@ header {
 /* Game Zero */
 
 .game__zero {
-	background-color: var(--game-zero);
+	background: var(--game-zero);
 }
 
 .game__zero-title {
@@ -494,7 +545,10 @@ header {
 	gap: 1rem;
 	flex-wrap: wrap;
 }
+
 .g0__question {
+	position: relative;
+	z-index: 1;
 	border-radius: 0.3rem;
 	padding: 1rem;
 	display: flex;
@@ -503,13 +557,14 @@ header {
 	justify-content: center;
 	flex-basis: 25rem;
 	min-height: 15rem;
-	background-color: var(--game-zero);
+	background: #d4bf9f;
+	background-color: #d4bf9f;
 	text-align: center;
 	transition: all ease 0.4s;
 	cursor: pointer;
 }
 .g0__question:hover {
-	background-color: rgb(153, 112, 105);
+	background: #b47654;
 }
 .g0__question:hover > .g0__text {
 	color: white;
@@ -518,27 +573,31 @@ header {
 	max-width: 100%;
 }
 .g0__icon {
-	position: relative;
 	border: 1px solid white;
 	border-radius: 1rem;
 	overflow: hidden;
 	width: 100px;
 	height: 100px;
 	pointer-events: none;
-	z-index: 1;
+}
+
+.g0__text {
+	font-weight: bold;
+	pointer-events: none;
 }
 .expose__liar {
 	position: absolute;
-	font-size: 10rem;
+	font-size: 2rem;
 	background-color: var(--main-red);
+	border-radius: 0.3rem;
 	color: black;
+	width: 60%;
 	font-weight: bold;
 	font-style: italic;
-	z-index: 10;
-	top: 0;
-}
-.g0__text {
-	font-weight: bold;
+	letter-spacing: 0.3rem;
+	padding: 0.1rem 0.5rem;
+	top: 2%;
+	transition: all ease-in 0.4s;
 	pointer-events: none;
 }
 .g0__result {
