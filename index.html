@@ -145,13 +145,12 @@
 			<div class="quote__container">
 				<figure class="quote">
 					<blockquote class="quote__text">
-						“Don't succumb to panic. Only those who see the bigger
-						picture win.”
+						“I lie to myself all the time. But I never believe me.”
 					</blockquote>
 					<figcaption>
 						&mdash;
-						<span class="quote__author">Akiyama Shinichi</span>,
-						<cite class="quote__origin">Liar Game</cite>
+						<span class="quote__author">S.E. Hinton</span>,
+						<cite class="quote__origin">The Outsiders</cite>
 					</figcaption>
 				</figure>
 			</div>
@@ -263,13 +262,13 @@
 			<div class="quote__container">
 				<figure class="quote">
 					<blockquote class="quote__text">
-						“I believe that there's not a single person whose heart
-						is evil.”
+						“The most seductive thing about art is the personality
+						of the artist himself.”
 					</blockquote>
 					<figcaption>
 						&mdash;
-						<span class="quote__author">Kanzaki Nao</span>,
-						<cite class="quote__origin">Liar Game</cite>
+						<span class="quote__author">Paul Cézanne</span>,
+						<cite class="quote__origin"></cite>
 					</figcaption>
 				</figure>
 			</div>
@@ -309,7 +308,8 @@
 					</svg>
 				</i>
 			</div>
-			<section class="game game__one noClick">
+			<!-- noClick -->
+			<section class="game game__one">
 				<h2 class="game__title">
 					<span class="game__number">Game One__</span>
 					<span class="game__name">The true work of Art</span>
@@ -322,7 +322,10 @@
 						placeholder=" all in?"
 					/>
 					<button class="btn__bet displayNone noOpacity">bet</button>
-					<button class="btn__play displayNone noOpacity">
+					<button
+						class="btn__play displayNone noOpacity"
+						data-game-number="1"
+					>
 						play
 					</button>
 				</div>
@@ -331,18 +334,43 @@
 						Game balance: <span class="bet__amount"> 0 </span>
 					</div>
 				</div>
-				<div class="game__container noOpacity noClick"></div>
+				<div class="game__container noOpacity noClick">
+					<div class="game__one-title">
+						Can you tell, which one is a
+						<span class="letter__red">true</span> Art?
+					</div>
+					<!-- <div class="game__one-art">
+						<div class="art">
+							<img src="./images/fakeArt/fake1.jpg" alt="art" />
+							<div class="artist noOpacity">jon dowe</div>
+						</div>
+						<div class="art">
+							<img
+								src="./images/trueArt/davinci.jpg"
+								alt="art"
+							/>
+							<div class="artist">alec lol</div>
+						</div>
+					</div>
+					<div class="g0__result win__color" data-correct="">
+						<span class="g0__result-text"
+							>Spot On! You won:
+						</span>
+						<span class="g0__result-amount">1000</span>
+						<span> You may proceed to the next <span class="letter__red">game</span>. 
+					</div>  -->
+				</div>
 			</section>
 			<div class="quote__container">
 				<figure class="quote">
 					<blockquote class="quote__text">
-						“People SHOULD be doubted… Doubting people is simply a
-						part of trying to know them.”
+						“Good luck is when opportunity meets preparation, while
+						bad luck is when lack of preparation meets reality.”
 					</blockquote>
 					<figcaption>
 						&mdash;
-						<span class="quote__author">Akiyama Shinichi</span>,
-						<cite class="quote__origin">Liar Game</cite>
+						<span class="quote__author">Eliyahu Goldratt</span>,
+						<cite class="quote__origin"></cite>
 					</figcaption>
 				</figure>
 			</div>
@@ -392,7 +420,10 @@
 						placeholder=" all in?"
 					/>
 					<button class="btn__bet displayNone noOpacity">bet</button>
-					<button class="btn__play displayNone noOpacity">
+					<button
+						class="btn__play displayNone noOpacity"
+						data-game-number="2"
+					>
 						play
 					</button>
 				</div>
@@ -462,7 +493,10 @@
 						placeholder=" all in?"
 					/>
 					<button class="btn__bet displayNone noOpacity">bet</button>
-					<button class="btn__play displayNone noOpacity">
+					<button
+						class="btn__play displayNone noOpacity"
+						data-game-number="3"
+					>
 						play
 					</button>
 				</div>

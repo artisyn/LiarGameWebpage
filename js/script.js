@@ -152,11 +152,17 @@ const placeBet = (target) => {
   betDisplay.innerText = +betDisplay.innerText + +betAmount;
   updateBalanceBet(betAmount);
 };
+const revealNext = (hide, reveal) => {
+  // Hide current
+  document.querySelector(hide).classList.add('noClick');
+  // Reveal next game
+  document.querySelector(reveal).classList.remove('noClick');
+};
 /////////////////////////////////////////////////////
 
 const functionStarter = (num, gameContainer) => {
   if (num === 0) gameZero(gameContainer);
-  if (num === 1) console.log(' game 1');
+  if (num === 1) gameOne(gameContainer);
   if (num === 2) console.log(' game 2');
   if (num === 3) console.log(' game 3');
   if (num === 4) console.log(' game 4');
@@ -279,7 +285,7 @@ const gameZero = (gameContainer) => {
   const winMarkup = `
   <div class="g0__result win__color" data-correct="">
 						<span class="g0__result-text"
-							>Congratulations! You won:
+							>Ohh.. You are not easily deceived! Your reward:
 						</span>
 						<span class="g0__result-amount">${betMoney * 2}</span>
 						<span> You may proceed to the next <span class="letter__red">game</span>.
@@ -288,7 +294,7 @@ const gameZero = (gameContainer) => {
   const looseMarkup = `
   <div class="g0__result loose__color" data-correct="">
 						<span class="g0__result-text"
-							>What a shame! You lost:
+							>How can you be so Naive! You lost:
 						</span>
 						<span class="g0__result-amount">${betMoney}</span>
 						<span> You may proceed to the next <span class="letter__red">game</span>.
@@ -298,18 +304,148 @@ const gameZero = (gameContainer) => {
   const looseGame = () => {
     gameContainer.insertAdjacentHTML('beforeend', looseMarkup);
     //Reveal next game
-    document.querySelector('.game__one').classList.remove('noClick');
-    // Hide current
-    document.querySelector('.game__zero').classList.add('noClick');
+    revealNext('.game__zero', '.game__one');
+    // document.querySelector('.game__one').classList.remove('noClick');
+    // // Hide current
+    // document.querySelector('.game__zero').classList.add('noClick');
   };
   const winGame = () => {
     updateBalanceWin(betMoney * 2);
     gameContainer.insertAdjacentHTML('beforeend', winMarkup);
     // Reveal next game
-    document.querySelector('.game__one').classList.remove('noClick');
-    // Hide current
-    document.querySelector('.game__zero').classList.add('noClick');
+    revealNext('.game__zero', '.game__one');
   };
+};
+
+//Game One
+const fakeArtArr = [
+  {
+    type: 'fake',
+    name: 'Made by Computer',
+    src: './images/fakeArt/fake1.jpg',
+  },
+  {
+    type: 'fake',
+    name: 'Made by Computer',
+    src: './images/fakeArt/fake2.jpg',
+  },
+  {
+    type: 'fake',
+    name: 'Made by Computer',
+    src: './images/fakeArt/fake3.jpg',
+  },
+  {
+    type: 'fake',
+    name: 'Made by Computer',
+    src: './images/fakeArt/fake4.jpg',
+  },
+  {
+    type: 'fake',
+    name: 'Made by Computer',
+    src: './images/fakeArt/fake5.jpg',
+  },
+  {
+    type: 'fake',
+    name: 'Made by Computer',
+    src: './images/fakeArt/fake6.jpg',
+  },
+];
+
+const realArtArr = [
+  {
+    type: 'real',
+    name: 'Gustav Klimt - Kiss',
+    src: './images/trueArt/klimt.jpg',
+  },
+  {
+    type: 'real',
+    name: 'da Vinci - Princess',
+    src: './images/trueArt/davinci.jpg',
+  },
+  {
+    type: 'real',
+    name: 'Picasso - Vollard',
+    src: './images/trueArt/picasso.jpg',
+  },
+  {
+    type: 'real',
+    name: 'Rembrandt - Storm on the Sea',
+    src: './images/trueArt/rembrandt.jpg',
+  },
+  {
+    type: 'real',
+    name: 'Salvador Dali - Civil War',
+    src: './images/trueArt/dali.jpg',
+  },
+  {
+    type: 'real',
+    name: 'Van Gogh - Cafe Terrace',
+    src: './images/trueArt/vangogh.jpg',
+  },
+];
+
+const gameOne = (gameContainer) => {
+  const betMoney = +gameContainer
+    .closest('section')
+    .querySelector('.bet__amount').innerText;
+
+  let artArrays = [
+    fakeArtArr[Math.floor(Math.random() * fakeArtArr.length)],
+    realArtArr[Math.floor(Math.random() * realArtArr.length)],
+  ];
+  artArrays = artArrays.sort((a, b) => 0.5 - Math.random());
+
+  const artMarkup = `
+  <div class="game__one-art">
+  					<div class="art ${artArrays[0].type}" data-art-name="${artArrays[0].name}" >
+  						<img src="${artArrays[0].src}" alt="art" />
+  <div class="artist noOpacity">${artArrays[0].name}</div>
+  					</div>
+  					<div class="art ${artArrays[1].type}"data-art-name="${artArrays[1].name}">
+  						<img
+  							src="${artArrays[1].src}"
+  							alt="art"
+  						/>
+              <div class="artist noOpacity">${artArrays[1].name}</div>
+  					</div>
+  				</div>
+  `;
+  gameContainer.insertAdjacentHTML('beforeend', artMarkup);
+  const winMarkup = `<div class="g0__result win__color" data-correct="">
+  <span class="g0__result-text"
+    >Your Artistic Taste is top-notch! Your reward:
+  </span>
+  <span class="g0__result-amount">${betMoney * 2}</span>
+  <span> Proceed to the next <span class="letter__red">game</span>. 
+</div> `;
+  const looseMarkup = `<div class="g0__result loose__color" data-correct="">
+  <span class="g0__result-text"
+    >Hmm, not an Art person at all... Your loss:
+  </span>
+  <span class="g0__result-amount">${betMoney}</span>
+  <span> Proceed to the next <span class="letter__red">game</span>. 
+</div> `;
+
+  const g1Win = () => {
+    gameContainer.insertAdjacentHTML('beforeend', winMarkup);
+    updateBalanceWin(betMoney * 2);
+    revealNext('.game__one', '.game__two');
+  };
+  const g1Loose = () => {
+    gameContainer.insertAdjacentHTML('beforeend', looseMarkup);
+    revealNext('.game__one', '.game__two');
+  };
+
+  gameContainer.querySelectorAll('.art').forEach((el) => {
+    el.addEventListener('click', (e) => {
+      if (e.target.classList.contains('real')) g1Win();
+      if (e.target.classList.contains('fake')) g1Loose();
+      gameContainer
+        .querySelectorAll('.artist')
+        .forEach((el) => el.classList.remove('noOpacity'));
+      gameContainer.classList.add('noClick');
+    });
+  });
 };
 
 // event Listeners

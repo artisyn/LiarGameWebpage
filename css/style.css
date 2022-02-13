@@ -4,11 +4,14 @@
 	box-sizing: border-box;
 }
 :root {
+	--main-black: rgb(31, 30, 30);
+	--main-white: rgb(228, 228, 228);
+	--letter-black: rgb(44, 44, 44);
 	--main-red: rgb(167, 37, 9, 1);
 	--main-red-light: rgb(167, 37, 9, 0.5);
 	--game-zero: linear-gradient(
 		to top,
-		#fdf7f2,
+		#e8d8d1,
 		#f3e6d9,
 		#e7d5c0,
 		#dac5a7,
@@ -19,7 +22,7 @@
 	--game-three: #95afc1;
 	--game-four: #9baebc;
 	--loose-color: rgb(198, 179, 178, 1);
-	--win-color: #a2b98c;
+	--win-color: rgb(208, 191, 159, 1);
 	--grad-1: linear-gradient(
 		90deg,
 		rgba(152, 50, 17, 1) 0%,
@@ -61,7 +64,7 @@ body {
 /* General Styles */
 .bigLetter {
 	font-style: italic;
-	color: black;
+	color: var(--letter-black);
 }
 
 .input {
@@ -83,10 +86,10 @@ input::-webkit-inner-spin-button {
 	color: var(--main-red);
 }
 .letter__white {
-	color: white;
+	color: var(--main-white);
 }
 .letter__black {
-	color: black;
+	color: var(--letter-black);
 }
 
 .tilted-border {
@@ -121,7 +124,7 @@ input::-webkit-inner-spin-button {
 	position: relative;
 	transition: all ease-in 1s;
 	z-index: 1;
-	background-color: rgba(0, 0, 0, 0.95);
+	background-color: var(--main-black);
 }
 .login__background {
 	position: absolute;
@@ -216,7 +219,7 @@ input::-webkit-inner-spin-button {
 	letter-spacing: 7px;
 	background-color: rgba(250, 249, 249, 0.2);
 	text-decoration-line: overline;
-	text-decoration-color: white;
+	text-decoration-color: var(--main-white);
 }
 .login__hint {
 	position: relative;
@@ -253,21 +256,21 @@ input::-webkit-inner-spin-button {
 	font-size: 3.5rem;
 	color: var(--main-red);
 	text-decoration-line: overline;
-	text-decoration-color: black;
+	text-decoration-color: var(--main-black);
 	text-align: center;
 	transition: all ease-out 3s;
 }
 
 /* Header*/
 header {
-	background-color: rgb(0, 0, 0);
+	background-color: var(--main-black);
 	padding: 0.8rem;
 	display: flex;
 	align-items: center;
 	justify-content: space-evenly;
 	font-size: 1.5rem;
 	flex-wrap: wrap;
-	color: white;
+	color: var(--main-white);
 }
 
 .player__number {
@@ -290,7 +293,7 @@ header {
 }
 .top__nav {
 	height: 5rem;
-	background-color: black;
+	background-color: var(--main-black);
 	display: grid;
 	grid-template-columns: auto 1fr;
 	position: sticky;
@@ -302,7 +305,7 @@ header {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	color: white;
+	color: var(--main-white);
 	font-style: italic;
 	font-size: 3rem;
 	margin-left: 1rem;
@@ -313,7 +316,7 @@ header {
 	align-items: center;
 	justify-content: center;
 	gap: 4rem;
-	color: white;
+	color: var(--main-white);
 	transition: all ease 0.3s;
 }
 .nav__ul > li {
@@ -349,7 +352,7 @@ header {
 .main__balance {
 	font-weight: bold;
 	background-color: var(--main-red);
-	color: black;
+	color: var(--letter-black);
 	padding: 0.3rem;
 	font-size: 1.2rem;
 	display: flex;
@@ -367,7 +370,7 @@ header {
 .quote__container {
 	min-height: 12rem;
 	overflow: hidden;
-	color: black;
+	color: var(--letter-black);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
@@ -447,7 +450,7 @@ header {
 }
 .btn__participate:hover {
 	background-color: var(--main-red-light);
-	color: white;
+	color: var(--main-white);
 	letter-spacing: 0.15rem;
 }
 
@@ -464,7 +467,7 @@ header {
 }
 .money__input:focus {
 	background-color: var(--main-red-light);
-	color: white;
+	color: var(--main-white);
 }
 .btn__bet {
 	transition: all ease 0.3s;
@@ -480,7 +483,7 @@ header {
 }
 .btn__bet:hover {
 	background-color: var(--main-red-light);
-	color: white;
+	color: var(--main-white);
 	letter-spacing: 0.15rem;
 }
 .btn__play {
@@ -497,15 +500,15 @@ header {
 }
 .btn__play:hover {
 	background-color: var(--main-red-light);
-	color: white;
+	color: var(--main-white);
 	letter-spacing: 0.15rem;
 }
 .game__container {
-	border: 2px solid white;
+	border: 2px solid var(--main-white);
 	height: fit-content;
 	border-radius: 0.3rem;
 	padding: 1rem;
-	background-color: black;
+	background-color: var(--main-black);
 	transition: all ease-in 0.4s;
 }
 .bet__container {
@@ -521,7 +524,7 @@ header {
 	font-style: italic;
 }
 .bet__amount {
-	color: white;
+	color: var(--main-white);
 	margin-left: 0.5rem;
 }
 
@@ -535,7 +538,7 @@ header {
 	text-align: center;
 	font-size: 1.3rem;
 	font-weight: bold;
-	color: white;
+	color: var(--main-white);
 	margin-bottom: 1rem;
 }
 .questions__blockg0 {
@@ -567,13 +570,13 @@ header {
 	background: #b47654;
 }
 .g0__question:hover > .g0__text {
-	color: white;
+	color: var(--main-white);
 }
 .g0__icon img {
 	max-width: 100%;
 }
 .g0__icon {
-	border: 1px solid white;
+	border: 1px solid var(--main-white);
 	border-radius: 1rem;
 	overflow: hidden;
 	width: 100px;
@@ -590,7 +593,7 @@ header {
 	font-size: 2rem;
 	background-color: var(--main-red);
 	border-radius: 0.3rem;
-	color: black;
+	color: var(--main-white);
 	width: 60%;
 	font-weight: bold;
 	font-style: italic;
@@ -619,13 +622,63 @@ header {
 .g0__result-amount {
 	margin-left: 1rem;
 	margin-right: 1rem;
-	color: white;
+	color: var(--main-red);
 }
 
 /* Game one */
 .game__one {
-	background-color: var(--game-one);
+	background: var(--game-zero);
 }
+.game__one-title {
+	text-align: center;
+	font-size: 1.3rem;
+	font-weight: bold;
+	color: var(--main-white);
+	margin-bottom: 1rem;
+}
+.game__one-art {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	gap: 1rem;
+	margin-bottom: 1rem;
+}
+.art > img {
+	max-width: 100%;
+	pointer-events: none;
+}
+.art {
+	overflow: hidden;
+	border: 3px solid var(--main-white);
+	border-radius: 0.5rem;
+	width: 30rem;
+	height: 35rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	position: relative;
+}
+.art:hover {
+	-webkit-box-shadow: 1px 2px 20px 10px rgb(209, 192, 161, 1);
+	box-shadow: 1px 2px 20px 10px rgb(209, 192, 161, 1);
+}
+.artist {
+	position: absolute;
+	color: var(--main-red);
+	background-color: var(--main-white);
+	width: 60%;
+	font-weight: bold;
+	bottom: 10%;
+	text-align: center;
+	font-size: 2rem;
+	font-style: italic;
+	padding: 0.3rem;
+	border-radius: 0.2rem;
+}
+
+/* Game two */
 
 .game__two {
 	background-color: var(--game-two);
@@ -650,7 +703,7 @@ header {
 
 /* character cards */
 .cards__container {
-	border: 1px solid black;
+	border: 1px solid var(--main-black);
 	margin: 0 auto;
 	height: 30rem;
 	gap: 1rem;
@@ -689,17 +742,17 @@ header {
 .card1 {
 	background: url(../images/akiyama.jpg) center center no-repeat;
 	background-size: cover;
-	color: white;
+	color: var(--main-white);
 }
 .card2 {
 	background: url(../images/kanzaki.jpg) center center no-repeat;
 	background-size: 400px;
-	color: rgb(0, 0, 0);
+	color: var(--letter-black);
 }
 .card3 {
 	background: url(../images/fukunaga.jpg) center center no-repeat;
 	background-size: cover;
-	color: white;
+	color: var(--main-white);
 }
 
 .card1:hover {
@@ -725,7 +778,7 @@ header {
 /* Footer */
 .footer {
 	/* border: 2px solid white; */
-	background-color: black;
+	background-color: var(--main-black);
 	padding: 1rem;
 	/* display: flex;
 	flex-direction: column;
@@ -740,7 +793,7 @@ header {
 .footer__author {
 	/* border: 1px solid #ffffff; */
 	width: 100%;
-	color: white;
+	color: var(--main-white);
 	/* display: flex;
 	justify-content: space-between; */
 	display: grid;
@@ -865,7 +918,7 @@ header {
 		display: none;
 		display: flex;
 		flex-direction: column;
-		background-color: black;
+		background-color: var(--main-black);
 		padding: 1rem;
 		width: 14rem;
 		top: 6.3rem;
@@ -928,19 +981,19 @@ header {
 	}
 
 	#burger__check:checked ~ .burger__menu {
-		background-color: rgb(255, 255, 255);
+		background-color: var(--main-white);
 		transform: translate(0, 0.5rem) rotate(0deg);
 		border-radius: 0.2rem;
 	}
 	#burger__check:checked ~ .burger__menu::before {
 		width: 3.8rem;
-		background-color: rgb(255, 255, 255);
+		background-color: var(--main-white);
 		transform: translate(-0.75rem, -0.52rem) rotate(121deg);
 		border-radius: 0.2rem;
 	}
 	#burger__check:checked ~ .burger__menu::after {
 		width: 3.8rem;
-		background-color: rgb(255, 255, 255);
+		background-color: var(--main-white);
 		transform: translate(0.98rem, 0.48rem) rotate(-121deg);
 		border-radius: 0.2rem;
 	}
