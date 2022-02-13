@@ -9,6 +9,8 @@ const mainWrapper = document.querySelector('.mainWrapper');
 const displayBalance = document.querySelector('.player__balance');
 const playerNumber = document.querySelector('.player__number');
 const playerName = document.querySelector('.player__name');
+const spinBtn = document.querySelector('.spin__button');
+const wheel = document.querySelector('.spinner__wheel');
 
 const gameInterface = document.querySelectorAll('.game__interface');
 const playBtn = document.querySelectorAll('.btn__play');
@@ -66,6 +68,9 @@ function arrShuffle(arr) {
   }
   return arr;
 }
+
+const randomInt = (min, max) =>
+  Math.floor(Math.random() * (max - min) + 1) + min;
 
 // remake to async await
 const hideLogin = (user) => {
@@ -163,7 +168,7 @@ const revealNext = (hide, reveal) => {
 const functionStarter = (num, gameContainer) => {
   if (num === 0) gameZero(gameContainer);
   if (num === 1) gameOne(gameContainer);
-  if (num === 2) console.log(' game 2');
+  if (num === 2) gameTwo(gameContainer);
   if (num === 3) console.log(' game 3');
   if (num === 4) console.log(' game 4');
 };
@@ -445,6 +450,16 @@ const gameOne = (gameContainer) => {
         .forEach((el) => el.classList.remove('noOpacity'));
       gameContainer.classList.add('noClick');
     });
+  });
+};
+
+////////////////////////////////////
+//game two
+const gameTwo = (gameContainer) => {
+  spinBtn.addEventListener('click', (e) => {
+    let i = randomInt(6, 12);
+    console.log(i);
+    wheel.style.transform = `rotate(${90 * i}deg)`;
   });
 };
 
