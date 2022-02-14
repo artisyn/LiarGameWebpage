@@ -24,7 +24,7 @@
 		#e8e9de,
 		#e0e2d6,
 		#d7dacd,
-		#ced3c5
+		#e8d8d1
 	);
 	--game-three: #95afc1;
 	--game-four: #9baebc;
@@ -854,6 +854,7 @@ header {
 	align-items: center;
 	justify-content: center;
 	gap: 2rem;
+	max-width: 32rem;
 }
 .game2__results-message {
 	border: 2px solid var(--main-red);

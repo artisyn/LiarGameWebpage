@@ -69,8 +69,11 @@ function arrShuffle(arr) {
   return arr;
 }
 
-const randomInt = (min, max) =>
-  Math.floor(Math.random() * (max - min) + 1) + min;
+const randomInt = (min, max) => {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1) + min);
+};
 
 // remake to async await
 const hideLogin = (user) => {
@@ -455,11 +458,92 @@ const gameOne = (gameContainer) => {
 
 ////////////////////////////////////
 //game two
+
 const gameTwo = (gameContainer) => {
+  let i = randomInt(6, 9);
+  console.log(i);
+  const betMoney = +gameContainer
+    .closest('section')
+    .querySelector('.bet__amount').innerText;
+
+  const spinResult = (i) => {
+    let text;
+    switch (i) {
+      case 6:
+        text = 'Quadripple the money!';
+        break;
+      case 7:
+        text = 'Triple the money!';
+        break;
+      case 8:
+        text = 'Minus Double the money!';
+        break;
+      case 9:
+        text = 'Minus Half of the money!';
+        break;
+    }
+
+    gameContainer.querySelector('.wheel__msg').innerText = text;
+  };
+
+  const gameTwoWin = (i) => {
+    let math = i === 6 ? 4 : 3;
+    const markup = `
+    <div class="g0__result win__color" data-correct="">
+								<span class="g0__result-text">Your Luck is Over 9000! Your reward: </span>
+								<span class="g0__result-amount">${betMoney * math}</span>
+								<span> Proceed to the next <span class="letter__red">game</span>. 
+							</div>
+    
+    `;
+    gameContainer
+      .querySelector('.game2__results')
+      .insertAdjacentHTML('beforeend', markup);
+    updateBalanceWin(betMoney * math);
+  };
+  const gameTwoLoose = (i) => {
+    const update2 = () => {
+      displayMoney = betMoney * 2;
+      updateBalanceWin(-(betMoney * 2));
+    };
+    const update05 = () => {
+      displayMoney = betMoney * 0.5;
+      updateBalanceWin(betMoney * 0.5);
+    };
+
+    let displayMoney = 0;
+    i === 8 ? update2() : update05();
+
+    const markup = `
+    <div class="g0__result loose__color" data-correct="">
+								<span class="g0__result-text">Maybe you were born under a bad sign? Your loss: </span>
+								<span class="g0__result-amount">${displayMoney}</span>
+								<span> Proceed to the next <span class="letter__red">game</span>. 
+							</div>
+    
+    `;
+    gameContainer
+      .querySelector('.game2__results')
+      .insertAdjacentHTML('beforeend', markup);
+  };
+
   spinBtn.addEventListener('click', (e) => {
-    let i = randomInt(6, 12);
-    console.log(i);
     wheel.style.transform = `rotate(${90 * i}deg)`;
+    spinBtn.disabled = true;
+
+    //////////////////////////// result
+    setTimeout(() => {
+      if (i === 6 || i === 7) {
+        gameTwoWin(i);
+        spinResult(i);
+      }
+      if (i === 8 || i === 9) {
+        gameTwoLoose(i);
+        spinResult(i);
+      }
+
+      revealNext('.game__two', '.game__three');
+    }, 4000); // animation time
   });
 };
 
