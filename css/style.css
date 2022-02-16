@@ -3,6 +3,9 @@
 *::after {
 	box-sizing: border-box;
 }
+::selection {
+	background: #bd8372;
+}
 :root {
 	--main-black: rgb(31, 30, 30);
 	--main-white: rgb(228, 228, 228);
@@ -66,6 +69,7 @@
 	--slice3-color: #00a4ff;
 	--slice4-color: #fe5a00;
 }
+
 html,
 body {
 	min-height: 100vh;
@@ -378,6 +382,43 @@ header {
 	background-color: rgb(228, 211, 211, 0.5);
 	margin-left: 1rem;
 	margin-right: 1rem;
+}
+
+.about__container {
+	padding: 1rem;
+	background: var(--game-two);
+}
+
+.about {
+	border-top-left-radius: 120px 24px;
+	border-top-right-radius: 120px 24px;
+	border-bottom-left-radius: 120px 24px;
+	border-bottom-right-radius: 120px 24px;
+	border: 4px solid var(--main-red);
+	min-height: 40vh;
+	padding: 2rem;
+	background: var(--game-zero);
+}
+
+.about__title {
+	text-align: center;
+	font-family: 'Satisfy', cursive;
+	font-weight: bold;
+	letter-spacing: 0.2rem;
+	font-size: 1.4rem;
+}
+
+.about__text {
+	color: var(--main-black);
+	border: 2px solid;
+	border-image: linear-gradient(45deg, var(--main-red), #ecc3c2) 1;
+	background: var(--main-white);
+	padding: 0.1rem 1.3rem;
+	-webkit-box-decoration-break: clone;
+	box-decoration-break: clone;
+	font-family: 'Satisfy', cursive;
+	font-size: 1.6rem;
+	font-weight: bold;
 }
 /* quoteBlock */
 
@@ -879,7 +920,7 @@ header {
 
 /* next content */
 
-.about {
+.prefooter {
 	border: 2px solid green;
 	height: 50rem;
 	background: url(../images/Screenshot\ 2022-02-07\ 021103.png);
