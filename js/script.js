@@ -16,6 +16,31 @@ const gameInterface = document.querySelectorAll('.game__interface');
 const playBtn = document.querySelectorAll('.btn__play');
 const betBtn = document.querySelectorAll('.btn__bet');
 
+// Tabs logic
+
+const tabs = document.querySelectorAll('.tab__radio');
+const tabTexts = document.querySelectorAll('.tab__text');
+tabs.forEach((tab) => {
+  tab.addEventListener('change', (e) => {
+    if (e.target.checked) {
+      // hiding every tab
+      tabTexts.forEach((text) =>
+        text.classList.add('displayNone', 'noOpacity')
+      );
+      // revealing selected tab
+      document
+        .querySelector(`.${e.target.id}__text`)
+        .classList.remove('displayNone');
+      // adding timeout for opacity to work
+      setTimeout(() => {
+        document
+          .querySelector(`.${e.target.id}__text`)
+          .classList.remove('noOpacity');
+      }, 100);
+    }
+  });
+});
+
 //main logic components
 let playerBalance = 100000000;
 // displayBalance
