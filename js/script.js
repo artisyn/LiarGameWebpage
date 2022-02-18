@@ -16,6 +16,25 @@ const gameInterface = document.querySelectorAll('.game__interface');
 const playBtn = document.querySelectorAll('.btn__play');
 const betBtn = document.querySelectorAll('.btn__bet');
 
+const aboutBtn = document.querySelector('.nav__li-about');
+const aboutSection = document.querySelector('.about__container');
+
+// nav logic
+// 118 is nav element height;
+const navHeight = 118;
+const scrollToElement = (element) => {
+  const elCoords = element.getBoundingClientRect();
+  window.scrollTo({
+    left: elCoords.left + window.scrollX,
+    top: elCoords.top + (window.scrollY - navHeight),
+    behavior: 'smooth',
+  });
+};
+
+aboutBtn.addEventListener('click', (e) => {
+  scrollToElement(aboutSection);
+});
+
 // Tabs logic
 
 const tabs = document.querySelectorAll('.tab__radio');
@@ -190,6 +209,28 @@ const revealNext = (hide, reveal) => {
   document.querySelector(hide).classList.add('noClick');
   // Reveal next game
   document.querySelector(reveal).classList.remove('noClick');
+};
+const finalResult = () => {
+  let resText;
+  const finalBalance = +playerBalance - 100000000;
+  if (finalBalance >= 0) resText = 'You returned your loan and won:';
+  if (finalBalance < 0) resText = 'Your debt to the organization is:';
+
+  let markup = `
+  <p class="final__result-text">
+  Congratulations on completing
+  <span class="letter__red">L</span>iar
+  <span class="letter__red">G</span>ame! Your final result is:
+  <br />
+  ${resText} <span class="final__balance">${Math.abs(finalBalance)}</span>
+</p>
+`;
+  const resultDisplay = document.querySelector('.final__result');
+  resultDisplay.insertAdjacentHTML('afterbegin', markup);
+  resultDisplay.classList.remove('displayNone');
+  setTimeout(() => {
+    resultDisplay.classList.remove('noOpacity');
+  }, 1000);
 };
 /////////////////////////////////////////////////////
 
@@ -486,7 +527,6 @@ const gameOne = (gameContainer) => {
 
 const gameTwo = (gameContainer) => {
   let i = randomInt(6, 9);
-  console.log(i);
   const betMoney = +gameContainer
     .closest('section')
     .querySelector('.bet__amount').innerText;
@@ -566,8 +606,9 @@ const gameTwo = (gameContainer) => {
         gameTwoLoose(i);
         spinResult(i);
       }
-
-      revealNext('.game__two', '.game__three');
+      document.querySelector('.game__two').classList.add('noClick');
+      // revealNext('.game__two', '.game__three'); // no game_three yet
+      finalResult();
     }, 4000); // animation time
   });
 };

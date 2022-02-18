@@ -944,12 +944,30 @@ header {
 	margin-left: 0.5rem;
 }
 
-/* Game three */
-.game__three {
-	background-color: var(--game-three);
+/* final result */
+.final__result-container {
+	min-height: 10rem;
+	background: var(--game-two);
 }
-.game__four {
-	background-color: var(--game-four);
+.final__result {
+	transition: all ease-in 0.3s;
+	border: 4px solid var(--main-red);
+	border-radius: 0.3rem;
+	min-height: 10rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--main-white);
+}
+.final__result-text {
+	font-size: 1.6rem;
+	font-family: 'Satisfy', cursive;
+	text-align: center;
+}
+.final__balance {
+	color: var(--main-red);
+	letter-spacing: 0.1rem;
+	font-weight: bold;
 }
 
 /* Tabs content */
@@ -1019,13 +1037,14 @@ header {
 
 /* character cards */
 .cards__container {
-	border: 1px solid var(--main-black);
+	background: var(--game-two);
 	margin: 0 auto;
 	height: 30rem;
 	gap: 1rem;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	padding: 1rem;
+	justify-items: center;
 }
 .card {
 	max-width: 400px;
