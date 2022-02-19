@@ -15,92 +15,78 @@
 		<title>Liar Game</title>
 	</head>
 	<body>
-		<!-- displayNone -->
-		<div class="loginWrapper displayNone">
-			<div class="login__background"></div>
-			<div class="login">
-				<div class="login__clue">There is a password clue here</div>
-				<i class="login__svg--hor"
-					><svg
-						width="1200"
-						height="16"
-						viewBox="0 0 1210 52"
-						fill="none"
-						xmlns="http://www.w3.org/2000/svg"
-					>
-						<path
-							d="M605 1L619.695 5.77457L628.776 18.2746V33.7254L619.695 46.2254L605 51L590.305 46.2254L581.224 33.7254V18.2746L590.305 5.77457L605 1Z"
-							fill="black"
-						/>
-						<path
-							d="M630.342 26L680.105 1.04049L812.962 26L680.105 50.9595L630.342 26Z"
-							fill="black"
-						/>
-						<path
-							d="M814.039 26L832.865 1.17741L1206.06 26L832.865 50.8226L814.039 26Z"
-							fill="black"
-						/>
-						<path
-							d="M579.658 26L529.895 1.04049L397.038 26L529.895 50.9595L579.658 26Z"
-							fill="black"
-						/>
-						<path
-							d="M395.961 26L377.135 1.17741L3.93835 26L377.135 50.8226L395.961 26Z"
-							fill="black"
-						/>
-						<path
-							d="M680.186 1L680.105 1.04049M680.105 1.04049L630.342 26M680.105 1.04049L812.962 26M680.105 1.04049L680.013 1.02327M630.342 26L630 26.1717M630.342 26L630 25.8283M630.342 26L680.105 50.9595M680.105 50.9595L680.186 51M680.105 50.9595L680.013 50.9767M680.105 50.9595L812.962 26M812.962 26L814 25.805M812.962 26L814 26.195M833 1L832.865 1.17741M832.865 1.17741L814.039 26M832.865 1.17741L1206.06 26M832.865 1.17741L832.358 1.14364M814.039 26L814 26.0518M814.039 26L814 25.9482M814.039 26L832.865 50.8226M832.865 50.8226L833 51M832.865 50.8226L832.358 50.8564M832.865 50.8226L1206.06 26M1206.06 26L1209 25.8046M1206.06 26L1209 26.1954M529.814 1L529.895 1.04049M529.895 1.04049L579.658 26M529.895 1.04049L397.038 26M529.895 1.04049L529.987 1.02327M579.658 26L580 26.1717M579.658 26L580 25.8283M579.658 26L529.895 50.9595M529.895 50.9595L529.814 51M529.895 50.9595L529.987 50.9767M529.895 50.9595L397.038 26M397.038 26L396 25.805M397.038 26L396 26.195M377 1L377.135 1.17741M377.135 1.17741L395.961 26M377.135 1.17741L3.93835 26M377.135 1.17741L377.642 1.14364M395.961 26L396 26.0518M395.961 26L396 25.9482M395.961 26L377.135 50.8226M377.135 50.8226L377 51M377.135 50.8226L377.642 50.8564M377.135 50.8226L3.93835 26M3.93835 26L1 25.8046M3.93835 26L1.00006 26.1954M605 1L619.695 5.77457L628.776 18.2746V33.7254L619.695 46.2254L605 51L590.305 46.2254L581.224 33.7254V18.2746L590.305 5.77457L605 1Z"
-							stroke="black"
-						/></svg
-				></i>
-				<div class="login__wrong-pass noOpacity">
-					<span class="letter__white">Incorrect</span> password,
-					please <span class="letter__black">continue</span> your
-					search
-				</div>
-				<form class="login__form" action="">
-					<div class="inputWrapper">
-						<div class="tilted-border">
-							<input
-								placeholder="username"
-								class="login__username"
-								type="text"
-								maxlength="16"
-							/>
-						</div>
+		<!-- displayNone  -->
 
-						<i class="login__svg--vert"
-							><svg
-								width="23"
-								height="100"
-								viewBox="0 0 23 171"
-								fill="none"
-								xmlns="http://www.w3.org/2000/svg"
-							>
-								<path
-									d="M0.504502 85.5L11.5 3.75087L22.4955 85.5L11.5 167.249L0.504502 85.5Z"
-									fill="#B90000"
-									stroke="black"
-								/>
-							</svg>
-						</i>
-						<div class="tilted-border">
-							<input
-								placeholder="password"
-								class="login__password"
-								type="password"
-							/>
-						</div>
+		<div class="loginWrapper">
+			<div class="login__introduction">
+				<div class="introduction__card">
+					<p>On your way home, you found a card on the floor...</p>
+					<div class="liar__card">
+						<img src="./images/liarCard.png" alt="fishy card" />
 					</div>
-					<label class="enterLabel" for="enterBtn">
-						<button id="enterBtn" class="login__btn"></button>
-						<div class="enterDiv">ENTER</div>
-					</label>
-				</form>
-
-				<div class="login__hint">?</div>
+				</div>
+				<p>
+					Out of pure curiosity, you followed the link, but it seems
+					to log in, <br />
+					you have to find a password...
+				</p>
 			</div>
+			<hr />
+
+			<div class="login__welcome">
+				<span class="letter__red">W</span>elcome
+				<span class="letter__red">P</span>layer
+			</div>
+			<div class="login__clue">
+				Enter your username and find a password clue, somewhere on this
+				page to continue...
+			</div>
+
+			<div class="login__wrong-pass noOpacity">
+				<span class="letter__white">Incorrect</span> password, please
+				<span class="letter__white">continue</span> your search
+			</div>
+
+			<form class="login__form" action="">
+				<div class="inputWrapper">
+					<input
+						placeholder="username"
+						class="login__username"
+						type="text"
+						maxlength="16"
+					/>
+
+					<i class="login__svg--vert"
+						><svg
+							width="23"
+							height="100"
+							viewBox="0 0 23 171"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								d="M0.504502 85.5L11.5 3.75087L22.4955 85.5L11.5 167.249L0.504502 85.5Z"
+								fill="#B90000"
+								stroke="black"
+							/>
+						</svg>
+					</i>
+
+					<input
+						placeholder="password"
+						class="login__password"
+						type="password"
+					/>
+				</div>
+				<label class="enterLabel" for="enterBtn">
+					<button id="enterBtn" class="login__btn"></button>
+					<div class="enterDiv">ENTER</div>
+				</label>
+			</form>
+
+			<div class="login__hint">?</div>
 		</div>
+
 		<div class="login__welcome-msg displayNone">
 			<h1 class="login__welcome-txt">
 				Welcome to <span class="bigLetter">L</span>iar
@@ -108,7 +94,7 @@
 			</h1>
 		</div>
 		<!-- displayNone noOpacity -->
-		<div class="mainWrapper">
+		<div class="mainWrapper displayNone noOpacity">
 			<header>
 				<div class="user__info--name">
 					Liar No. <span class="player__number">6</span>,
@@ -130,10 +116,45 @@
 						<div class="burger__menu"></div>
 
 						<ul class="nav__ul">
-							<li class="nav__li-about">About</li>
-							<li class="nav__li-game">Game</li>
-							<li class="nav__li-carousel">Carousel</li>
-							<li class="nav__li-contact">Contact</li>
+							<li
+								class="nav nav__li-about"
+								data-el=".rules__container"
+							>
+								Rules
+							</li>
+							<li class="nav__li-game" id="li_game">
+								Games
+
+								<div class="game__nav">
+									<div
+										class="nav gamen1"
+										data-el=".game__zero"
+									>
+										Game 0
+									</div>
+									<div
+										class="nav gamen2"
+										data-el=".game__one"
+									>
+										Game 1
+									</div>
+									<div
+										class="nav gamen3"
+										data-el=".game__two"
+									>
+										Game 2
+									</div>
+								</div>
+							</li>
+							<li
+								class="nav nav__li-manga"
+								data-el=".tabs__container"
+							>
+								Manga Info
+							</li>
+							<li class="nav nav__li-footer" data-el=".footer">
+								Footer
+							</li>
 						</ul>
 					</label>
 				</nav>
@@ -141,59 +162,64 @@
 					Balance: <span class="player__balance">100 000 000</span>
 				</div>
 			</div>
-			<div class="about__container">
-				<h2 class="about__title">About</h2>
-				<div class="about">
-					<div class="about__svg">
+			<div class="rules__container">
+				<h2 class="rules__title">Greetings</h2>
+				<div class="rules">
+					<div class="rules__svg">
 						<img src="./images/svg/about.svg" alt="Nice art" />
 					</div>
-
+					<p class="rules__welcome">Welcome to Liar Game</p>
 					<p>
-						<span class="about__text">
-							Welcome to the website, which was inspired by the
-							popular Japanese manga and tv series called: Liar
-							Game</span
+						<span class="rules__text">
+							Participate in a series of Games, for a chance to
+							make a fortune.</span
+						>
+					</p>
+					<p class="rules__welcome">Rules:</p>
+					<p>
+						<span class="rules__text">
+							The "organization" loaned you 100 000 000.</span
 						>
 					</p>
 					<p>
-						<span class="about__text">
-							Here you are challenged to participate in a series
-							of Games, where you can win or loose "money",
-							depending on the amount of the bet.</span
+						<span class="rules__text">
+							Use this money to participate in Games</span
 						>
 					</p>
 					<p>
-						<span class="about__text">
-							At the start, you are given 100 000 000 as a loan,
-							each time you win, the money is doubled, each time
-							you loose, only the amount that you bet is
-							removed</span
+						<span class="rules__text">
+							Read the introductory quote before each Game, and
+							place a bet before playing.</span
 						>
 					</p>
 					<p>
-						<span class="about__text">
-							At the end, the Liar Game organization will take the
-							loaned 100 000 000 back, the remainer is your price,
-							if the remainer is a positive number, you've won or
-							if the balance is negative, you loose and will be
-							forced to pay the money back.</span
-						>
+						<span class="rules__text">
+							If you win, the money will be
+							<span class="letter__red">Doubled</span>. However,
+							if you loose, the money will be
+							<span class="letter__red">taken away</span>.
+						</span>
 					</p>
 					<p>
-						<span class="about__text">
+						<span class="rules__text">
+							At the end, the "organization" will take the loaned
+							100 000 000 back, the remainer is your prize. If you
+							won't be able to
+							<span class="letter__red">pay back</span>, you will
+							be taken away, so weigh your options before betting.
+						</span>
+					</p>
+					<p>
+						<span class="rules__text">
 							Alternatively, you can play without placing any
 							bets, just to test your knowledge or luck.</span
 						>
 					</p>
-
-					<p>
-						<span class="about__text">
-							So may the force be with you and good luck.</span
-						>
+					<p class="rules__welcome">
+						Be very careful and don't trust anyone...
 					</p>
 				</div>
 			</div>
-
 			<div class="quote__container">
 				<figure class="quote">
 					<blockquote class="quote__text">
@@ -236,7 +262,6 @@
 						Game balance: <span class="bet__amount"> 0 </span>
 					</div>
 				</div>
-
 				<div class="game__container cont0 noOpacity noClick">
 					<div class="game__zero-title">
 						Can you spot the <span class="letter__red">liar</span>?
@@ -388,7 +413,6 @@
 					</div>
 				</div>
 			</section>
-
 			<section class="final__result-container">
 				<div class="final__result displayNone noOpacity"></div>
 			</section>
@@ -519,7 +543,14 @@
 				</div>
 			</section>
 			<footer class="footer">
-				<div class="footer__more"></div>
+				<div class="footer__about">
+					This website was inspired by the popular Japanese manga and
+					tv series called: Liar Game
+				</div>
+				<div class="footer__more">
+					© Copyright by Artiom Sinicyn. Don't claim as your own
+					product.
+				</div>
 				<div class="footer__author">
 					<div class="author__greet">
 						Made with

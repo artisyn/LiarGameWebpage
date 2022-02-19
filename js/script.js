@@ -15,9 +15,7 @@ const wheel = document.querySelector('.spinner__wheel');
 const gameInterface = document.querySelectorAll('.game__interface');
 const playBtn = document.querySelectorAll('.btn__play');
 const betBtn = document.querySelectorAll('.btn__bet');
-
-const aboutBtn = document.querySelector('.nav__li-about');
-const aboutSection = document.querySelector('.about__container');
+const navButtons = document.querySelectorAll('.nav');
 
 // nav logic
 // 118 is nav element height;
@@ -31,8 +29,10 @@ const scrollToElement = (element) => {
   });
 };
 
-aboutBtn.addEventListener('click', (e) => {
-  scrollToElement(aboutSection);
+navButtons.forEach((button) => {
+  button.addEventListener('click', function (e) {
+    scrollToElement(document.querySelector(this.dataset.el));
+  });
 });
 
 // Tabs logic
@@ -146,6 +146,24 @@ const hideLogin = (user) => {
   }, 4000);
 };
 const displayBadPass = () => {
+  const markup = `
+  <span class="letter__white">Incorrect</span> password, please
+				<span class="letter__white">continue</span> your search
+  `;
+  document.querySelector('.login__wrong-pass').innerHTML = markup;
+
+  wrongPassMsg.classList.remove('noOpacity');
+  setTimeout(() => {
+    wrongPassMsg.classList.add('noOpacity');
+  }, 2000);
+};
+
+const displayBadUser = () => {
+  const markup = `
+  <span class="letter__white">No</span> username, please
+				<span class="letter__white">enter</span> your username
+  `;
+  document.querySelector('.login__wrong-pass').innerHTML = markup;
   wrongPassMsg.classList.remove('noOpacity');
   setTimeout(() => {
     wrongPassMsg.classList.add('noOpacity');
@@ -158,6 +176,10 @@ loginBtn.addEventListener('click', (e) => {
   e.preventDefault();
   const pass = +userPassword.value;
   const user = userName.value;
+  if (user === '') {
+    displayBadUser();
+    return;
+  }
   userPassword.value = '';
 
   if (pass === 3334) hideLogin(user);
@@ -220,7 +242,7 @@ const finalResult = () => {
   <p class="final__result-text">
   Congratulations on completing
   <span class="letter__red">L</span>iar
-  <span class="letter__red">G</span>ame! Your final result is:
+  <span class="letter__red">G</span>ame! Your final result:
   <br />
   ${resText} <span class="final__balance">${Math.abs(finalBalance)}</span>
 </p>
