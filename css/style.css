@@ -1206,7 +1206,7 @@ header {
 	}
 }
 .fadeInOut {
-	animation: fadeInOut 6s ease;
+	animation: fadeInOut 6s linear;
 }
 
 @media only screen and (max-width: 500px) {
@@ -1250,7 +1250,7 @@ header {
 }
 
 .fadeIn {
-	animation: fadeIn 3s ease-in;
+	animation: fadeIn 3s linear;
 }
 @keyframes fadeIn {
 	0% {

@@ -140,7 +140,7 @@ const hideLogin = (user) => {
       mainWrapper.classList.remove('noOpacity');
       setTimeout(() => {
         mainWrapper.classList.remove('fadeIn');
-      }, 4000);
+      }, 3800);
       /// user
     }, 6000);
   }, 4000);
